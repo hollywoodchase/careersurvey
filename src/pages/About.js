@@ -7,18 +7,18 @@ import Col from "../components/Col";
 function About() {
   return (
     <div>
-      <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-        <h1>Pupster</h1>
-        <h2>They're the Good Boys and Girls</h2>
+      <Hero backgroundImage="https://www.moneycrashers.com/wp-content/uploads/2011/03/5-great-future-career-fields-1068x713.jpg">
+        <h1>Career Survey</h1>
+        <h2>Find Your Future</h2>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
-          <Col size="md-12">
+          {/* <Col size="md-12">
             <h1>Welcome To Pupster!</h1>
-          </Col>
+          </Col> */}
         </Row>
         <Row>
-          <Col size="md-12">
+          {/* <Col size="md-12">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
               consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
@@ -54,7 +54,7 @@ function About() {
               interdum elit pulvinar eu. Quisque vitae quam dapibus, vestibulum mauris quis, laoreet
               massa.
             </p>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>
