@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Which hours would you prefer to work a shift?",
+        "a": "6 AM - 2 PM",
+        "b": "9 AM - 5 PM",
+        "c": "12 PM - 8 PM",
+        "d": "6 PM - 2 AM"
+    },
+    {
+        "question": "Which of the following would you like to be able to own one day?",
+        "a": "Car",
+        "b": "House",
+        "c": "Boat",
+        "d": "A house that you own just to rent to other people (rental property)"
+    },
+    {
+        "question": "How many hours a day do you typically play video games?",
+        "a": "0",
+        "b": "1-2",
+        "c": "3-5",
+        "d": "6-8"
+    },
+    {
+        "question": "On which of the following technologies have you helped someone older than you use?",
+        "a": "iPhone/Android",
+        "b": "Computer",
+        "c": "Website",
+        "d": "TV/cable"
+    },
+    {  
+        "question": "How would you react to dealing with sick people or seeing blood?",
+        "a": "Totally grossed out",
+        "b": "No problem with sick people but don’t want to work with blood",
+        "c": "Don’t mind blood but don’t want to work with sick people",
+        "d": "Would be willing to work with sick people and blood"
+    },
+    {
+        "question": "How comfortable are you talking to random people?",
+        "a": "I always keep to myself",
+        "b": "If someone talks to me I will respond",
+        "c": "If I have a specific purpose I don’t mind talking to a stranger",
+        "d": "I am willing to talk to anyone"
+    },
+    {
+        "question": "What kinds of stuff do you like to watch on Netflix? ",
+        "a": "Food shows",
+        "b": "Medical shows",
+        "c": "Anime",
+        "d": "Informational/documentary shows"
+    },
+    {
+        "question": "Do you like to build things?",
+        "a": "No",
+        "b": "Yes, using a computer",
+        "c": "Yes, when I am given specific instructions",
+        "d": "Yes, and I like to figure it out on my own"
+    },
+    {
+        "question": "Which of these hobbies are you interested in?",
+        "a": "Professional sports",
+        "b": "Technology",
+        "c": "Science",
+        "d": "Social Media"
+    },
+    {
+        "question": "Which of these is the highest priority to you?",
+        "a": "Making the most money",
+        "b": "Going to school for the least amount of time",
+        "c": "Helping other people",
+        "d": "Having a job that you like"
+    }
+]
