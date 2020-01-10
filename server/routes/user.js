@@ -6,14 +6,23 @@ const passport = require('../passport')
 router.post('/', (req, res) => {
     console.log('user signup');
 
-    const { username, password } = req.body
-    // ADD VALIDATION
+    let { username, password } = req.body
+    // VALIDATION
+    username = username.trim();
+    username = username.toLowerCase();
+    password = password.trim();
+    if (password.length < 8 ) {
+        return res.json({
+            error: `Password needs to be a minimum of eight characters`
+        })
+    }
+
     User.findOne({ username: username }, (err, user) => {
         if (err) {
             console.log('User.js post error: ', err)
         } else if (user) {
             res.json({
-                error: `Sorry, already a user with the username: ${username}`
+                error: `Sorry, there's already a user with the username: ${username}`
             })
         }
         else {

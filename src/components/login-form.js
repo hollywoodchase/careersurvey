@@ -87,6 +87,7 @@ class LoginForm extends Component {
                                     onChange={this.handleChange}
                                 />
                             </div>
+                            <div className="error">{this.state.error ? this.state.errorMessage : ""}</div>
                         </div>
                         <div className="form-group ">
                             <div className="col-7"></div>
