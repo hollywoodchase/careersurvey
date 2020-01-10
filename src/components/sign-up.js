@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { withRouter } from "react-router-dom";
 
 class Signup extends Component {
 	constructor() {
@@ -8,6 +9,8 @@ class Signup extends Component {
 			username: '',
 			password: '',
 			confirmPassword: '',
+			error: false,
+			errorMessage: ""
 
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
@@ -19,9 +22,11 @@ class Signup extends Component {
 		})
 	}
 	handleSubmit(event) {
+
 		console.log('sign-up handleSubmit, username: ')
 		console.log(this.state.username)
 		event.preventDefault()
+		this.setState({error: false})
 
 		//request to server to add a new username/password
 		axios.post('/user/', {
@@ -30,12 +35,11 @@ class Signup extends Component {
 		})
 			.then(response => {
 				console.log(response)
-				if (!response.data.errmsg) {
+				if (!response.data.error) {
 					console.log('successful signup')
-					this.setState({ //redirect to login page
-						redirectTo: '/login'
-					})
+					this.props.history.push("/login");
 				} else {
+					this.setState({error: true, errorMessage: response.data.error})
 					console.log('username already taken')
 				}
 			}).catch(error => {
@@ -47,6 +51,7 @@ class Signup extends Component {
 
 
 render() {
+	
 	return (
 		<div className="SignupForm">
 			<h4>Sign up</h4>
@@ -66,6 +71,8 @@ render() {
 						/>
 					</div>
 				</div>
+	
+
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">
 						<label className="form-label" htmlFor="password">Password: </label>
@@ -79,7 +86,11 @@ render() {
 							onChange={this.handleChange}
 						/>
 					</div>
+					<div className="error">{this.state.error ? this.state.errorMessage : ""}</div>
 				</div>
+
+				
+
 				<div className="form-group ">
 					<div className="col-7"></div>
 					<button
@@ -95,4 +106,4 @@ render() {
 }
 }
 
-export default Signup
+export default withRouter(Signup);
