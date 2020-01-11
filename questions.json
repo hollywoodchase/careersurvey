@@ -3,15 +3,15 @@
         "question": "Which hours would you prefer to work a shift?",
         "a": "6 AM - 2 PM",
         "b": "9 AM - 5 PM",
-        "c": "12 PM - 8 PM",
-        "d": "6 PM - 2 AM"
+        "c": "6 PM - 2 AM",
+        "d": "Whenever I want"
     },
     {
         "question": "Which of the following would you like to be able to own one day?",
         "a": "Car",
         "b": "House",
         "c": "Boat",
-        "d": "A house that you own just to rent to other people (rental property)"
+        "d": "Vacation Home"
     },
     {
         "question": "How many hours a day do you typically play video games?",
@@ -21,18 +21,23 @@
         "d": "6-8"
     },
     {
-        "question": "On which of the following technologies have you helped someone older than you use?",
-        "a": "iPhone/Android",
-        "b": "Computer",
-        "c": "Website",
-        "d": "TV/cable"
-    },
-    {  
         "question": "How would you react to dealing with sick people or seeing blood?",
         "a": "Totally grossed out",
         "b": "No problem with sick people but don’t want to work with blood",
         "c": "Don’t mind blood but don’t want to work with sick people",
         "d": "Would be willing to work with sick people and blood"
+    },
+    {
+        "question": "Would you be willing to work in the oral care (dentistry) field?",
+        "a": "Yes",
+        "b": "No"
+    },
+    {
+        "question": "If you knew you wouldn’t go into debt, which level of education would you pursue?",
+        "a": "High School",
+        "b": "2 years of college",
+        "c": "4 years of college",
+        "d": "more than 4 years of college"
     },
     {
         "question": "How comfortable are you talking to random people?",
@@ -42,11 +47,11 @@
         "d": "I am willing to talk to anyone"
     },
     {
-        "question": "What kinds of stuff do you like to watch on Netflix? ",
-        "a": "Food shows",
-        "b": "Medical shows",
-        "c": "Anime",
-        "d": "Informational/documentary shows"
+        "question": "What’s your favorite subject in school?",
+        "a": "Math",
+        "b": "Science",
+        "c": "Technology/Shop",
+        "d": "English/History"
     },
     {
         "question": "Do you like to build things?",
@@ -56,17 +61,31 @@
         "d": "Yes, and I like to figure it out on my own"
     },
     {
-        "question": "Which of these hobbies are you interested in?",
-        "a": "Professional sports",
-        "b": "Technology",
-        "c": "Science",
-        "d": "Social Media"
-    },
-    {
         "question": "Which of these is the highest priority to you?",
         "a": "Making the most money",
         "b": "Going to school for the least amount of time",
         "c": "Helping other people",
         "d": "Having a job that you like"
+    },
+    {
+        "question": "Where would you want to go to work every day?",
+        "a": "An office building",
+        "b": "An outdoor workplace",
+        "c": "A government or medical facility",
+        "d": "A different place every shift"
+    },
+    {
+        "question": "Do you care about the future of our environment?",
+        "a": "Who cares? The world is ending",
+        "B": "Yes, but it’s too late, the damage is done",
+        "C": "Yes, I try to make a difference in small ways",
+        "d": "Yes, the future of our planet is important and we need to make big changes now"
+    },
+    {
+        "question": "Do you enjoy hands-on work?",
+        "a": "Yes, I am very hands on",
+        "b": "I will if I have to, but I rather not",
+        "c": "No, I rather not work with my hands",
+        "d": "Absolutely not"
     }
 ]
