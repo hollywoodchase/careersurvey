@@ -1,0 +1,1002 @@
+[
+    {
+        "title": "Software Developer",
+        "rank": "1",
+        "description": "Software developers need to be innovative, creative and, of course, technical in order to succeed in this field. They might write new code or fix bugs in code to make it work better.",
+        "image": "TKTK",
+        "projected-jobs": "241,500",
+        "median-salary": "$103,620",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/software-developer"
+    },
+    {
+        "title": "Dentist",
+        "rank": "2",
+        "description": "From filling cavities to whitening teeth, dentists primarily examine and treat issues involving the mouth, gums and teeth.",
+        "image": "TKTK",
+        "projected-jobs": "10,400",
+        "median-salary": "$151,850",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/dentist"
+    },
+    {
+        "title": "Physician Assistant",
+        "rank": "3",
+        "description": "Physician assistants work under doctors to care for the sick or injured by interpreting tests and conducting exams",
+        "image": "TKTK",
+        "projected-jobs": "37,000",
+        "median-salary": "$108,610",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/physician-assistant"
+    },
+    {
+        "title": "Orthodontist",
+        "rank": "4",
+        "description": "Picture-perfect teeth often start with an orthodontist. Orthodontists focus primarily on the teeth and jaw, including realignment and preserving normal function and appearance.",
+        "image": "TKTK",
+        "projected-jobs": "500",
+        "median-salary": "$208,000",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/orthodontist"
+    },
+    {
+        "title": "Nurse Practitioner",
+        "rank": "5",
+        "description": "Nurse practitioners perform a lot of the same duties as physicians; they perform physical exams, order lab tests and analyze results, prescribe medicines and authorize treatments. These professionals usually have a specialty, such as adult and geriatric health, pediatric health or mental health.",
+        "image": "TKTK",
+        "projected-jobs": "53,300",
+        "median-salary": "$107,030",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/nurse-practitioner"
+    },
+    {
+        "title": "Statistician",
+        "rank": "6",
+        "description": "Statistics is the science of using data to make decisions. This is relevant in almost all fields of work and there are many opportunities for employment.",
+        "image": "TKTK",
+        "projected-jobs": "13,600",
+        "median-salary": "$87,780",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/statistician"
+    },
+    {
+        "title": "Physician",
+        "rank": "7",
+        "description": "Physicians provide preventative care but also treat and diagnose a range of illnesses in their patients. Schooling and competition is intense for all types of doctors but the payoff is high.",
+        "image": "TKTK",
+        "projected-jobs": "1,600",
+        "median-salary": "$194,500",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/physician"
+    },
+    {
+        "title": "Speech-Language Pathologist",
+        "rank": "8",
+        "description": "Those in this profession work to diagnose and treat a variety of speech and language difficulties and can work in a number of settings.",
+        "image": "TKTK",
+        "projected-jobs": "41,900",
+        "median-salary": "$77,510",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/speech-language-pathologist"
+    },
+    {
+        "title": "Oral and Maxillofacial Surgeon",
+        "rank": "9",
+        "description": "From repairing cleft lips and palates to taking care of impacted teeth, oral and maxillofacial surgeons operate specifically on the mouth, jaws, teeth, gums, neck and head. ",
+        "image": "TKTK",
+        "projected-jobs": "400",
+        "median-salary": "$208,000",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/oral-and-maxillofacial-surgeon"
+    },
+    {
+        "title": "Veterinarian",
+        "rank": "10",
+        "description": "An average day as a veterinarian might include performing surgeries or setting broken bones for animals. One must-have skill is communication. Vets routinely interact with animal owners and support staff. ",
+        "image": "TKTK",
+        "projected-jobs": "15,600",
+        "median-salary": "$93,830",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/veterinarian"
+    },
+    {
+        "title": "Medical and Health Services Manager",
+        "rank": "11",
+        "description": "Health care systems are like well-oiled machines, and it’s the job of medical and health services managers to keep all the parts running. These professionals might hire staff members, manage budgets, create goals for a department and increase the efficiency of health services, as well as manage a practice for a group of doctors, manage a medical facility or manage a department.",
+        "image": "TKTK",
+        "projected-jobs": "71,600",
+        "median-salary": "$99,730",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/medical-and-health-services-manager"
+    },
+    {
+        "title": "IT Manager",
+        "rank": "12",
+        "description": "Our increasingly digital workplace demands more IT managers, who coordinate computer-related activities for an organization. Duties include analyzing and recommending computer needs, installing and maintaining computer hardware and software, securing an office’s network and electronic documents and searching for new technologies and upgrade opportunities.",
+        "image": "TKTK",
+        "projected-jobs": "46,800",
+        "median-salary": "$142,530",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/it-manager"
+    },
+    {
+        "title": "Registered Nurse",
+        "rank": "13",
+        "description": "A registered nurse has a wide range of responsibilities, from giving medicine to performing medical procedures.",
+        "image": "TKTK",
+        "projected-jobs": "371,500",
+        "median-salary": "$71,730",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/registered-nurse"
+    },
+    {
+        "title": "Mathematician",
+        "rank": "14",
+        "description": "Mathematicians may have careers as varied as mathematics itself, working everywhere from classrooms to government buildings. While some mathematicians work primarily with theory, others use theory to solve everyday problems.",
+        "image": "TKTK",
+        "projected-jobs": "800",
+        "median-salary": "$101,900",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/mathematician"
+    },
+    {
+        "title": "Physical Therapist",
+        "rank": "15",
+        "description": "The role of a physical therapist is to help patients manage and treat injuries or long-term illnesses by examining them and developing a plan that helps them increase mobility and lessen pain.",
+        "image": "TKTK",
+        "projected-jobs": "54,200",
+        "median-salary": "$87,930",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/physical-therapist"
+    },
+    {
+        "title": "Optometrist",
+        "rank": "16",
+        "description": "You probably wouldn’t be sporting those new glasses or contact lenses without a prescription from an optometrist. Prescriptions for eyewear or eye-related medications typically start with vision tests and a specific diagnosis from an optometrist. These medical professionals also provide treatments for eye diseases, preoperative and postoperative care and referrals to other health care providers.",
+        "image": "TKTK",
+        "projected-jobs": "4,000",
+        "median-salary": "$111,790",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/optometrist"
+    },
+    {
+        "title": "Anesthesiologist",
+        "rank": "17",
+        "description": "From surgery to chronic illness, anesthesiologists manage all types of pain through drugs, and even monitor patients’ vital signs.",
+        "image": "TKTK",
+        "projected-jobs": "1,500",
+        "median-salary": "$208,000",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/anesthesiologist"
+    },
+    {
+        "title": "Obstetrician and Gynecologist",
+        "rank": "17",
+        "description": "Whether you’re going in for a routine checkup or delivering your first child, obstetricians and gynecologists can provide a variety of care related to childbirth and female reproductive health.",
+        "image": "TKTK",
+        "projected-jobs": "500",
+        "median-salary": "$208,000",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/obstetrician-and-gynecologist"
+    },
+    {
+        "title": "Surgeon",
+        "rank": "17",
+        "description": "Surgeons treat patients’ injuries, diseases and deformities through operations that repair or prevent a medical problem. Surgeons can perform general surgery or specialize in areas including orthopedic, neurological, cardiovascular and plastic or reconstructive surgery.",
+        "image": "TKTK",
+        "projected-jobs": "500",
+        "median-salary": "$208,000",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/surgeon"
+    },
+    {
+        "title": "Operations Research Analyst",
+        "rank": "20",
+        "description": "From data mining to mathematical modeling, operations research analysts use advanced techniques to help businesses run in a more efficient and cost-effective manner.",
+        "image": "TKTK",
+        "projected-jobs": "28,100",
+        "median-salary": "$83,390",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/operations-research-analyst"
+    },
+    {
+        "title": "Nurse Anesthetist",
+        "rank": "21",
+        "description": "As a type of advanced practice registered nurse, nurse anesthetists work with patients regarding anesthetic treatment before, during and after surgery, as well as with therapy or other medical procedures that use anesthesia. ",
+        "image": "TKTK",
+        "projected-jobs": "7,600",
+        "median-salary": "$167,950",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/nurse-anesthetist"
+    },
+    {
+        "title": "Pediatrician",
+        "rank": "22",
+        "description": "The doctors who sent you on your way with a lollipop and sticker when you were younger were likely pediatricians, doctors who diagnose and treat medical issues specific to infants, children, teenagers and young adults. Pediatrician responsibilities typically include treating common illnesses, minor injuries and infectious diseases, as well as administering vaccinations.",
+        "image": "TKTK",
+        "projected-jobs": "700",
+        "median-salary": "$170,560",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/pediatrician"
+    },
+    {
+        "title": "Web Developer",
+        "rank": "23",
+        "description": "Web developers use code to create everything you see on your favorite websites, from the special effects to the search functionality.",
+        "image": "TKTK",
+        "projected-jobs": "20,900",
+        "median-salary": "$69,430",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/web-developer"
+    },
+    {
+        "title": "Dental Hygienist",
+        "rank": "24",
+        "description": "Dental hygienists typically work alongside dentists, cleaning a patient’s teeth, taking X-rays and applying fluoride.",
+        "image": "TKTK",
+        "projected-jobs": "23,700",
+        "median-salary": "$74,820",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/dental-hygienist"
+    },
+    {
+        "title": "Genetic Counselor",
+        "rank": "25",
+        "description": "Genetic counselors contribute to preventive care by assessing an individual’s or family’s risk for inherited conditions like cancer and birth defects. A genetic counselor’s duties range from analyzing genetic information to discussing testing options with patients to working with health care providers to determine patient treatment plans.",
+        "image": "TKTK",
+        "projected-jobs": "800",
+        "median-salary": "$80,370",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/genetic-counselor"
+    },
+    {
+        "title": "Physical Therapist Assistant",
+        "rank": "26",
+        "description": "Helping patients with their physical therapy plans is the main task of physical therapist assistants. They work to fix damages on their patients from various injuries.",
+        "image": "TKTK",
+        "projected-jobs": "26,700",
+        "median-salary": "$58,040",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/physical-therapist-assistant"
+    },
+    {
+        "title": "Financial Manager",
+        "rank": "27",
+        "description": "If financial managers were doctors, the financial success of their organization would be a testimony to their treatment. These business professionals create financial reports, coordinate investment activity and develop long-term financial strategies for companies.",
+        "image": "TKTK",
+        "projected-jobs": "104,700",
+        "median-salary": "$127,990",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/financial-manager"
+    },
+    {
+        "title": "Occupational Therapist",
+        "rank": "28",
+        "description": "Occupational therapists assist those who are sick, injured or disabled with day-to-day activities, such as showing someone how to use a wheelchair, or helping someone who had a stroke relearn how to cook, clean or get dressed. These professionals might also work with kids in educational settings, people with mental illnesses or someone who was involved in a bad car accident.",
+        "image": "TKTK",
+        "projected-jobs": "23,700",
+        "median-salary": "$84,270",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/occupational-therapist"
+    },
+    {
+        "title": "Psychologist",
+        "rank": "29",
+        "description": "Psychologists study our behavior and how our brains function, and can help patients work through emotional, behavioral and psychological issues, as well as diagnose disorders. ",
+        "image": "TKTK",
+        "projected-jobs": "2,100",
+        "median-salary": "$100,770",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/psychologist"
+    },
+    {
+        "title": "Database Administrator",
+        "rank": "30",
+        "description": "While the pronunciation of the word “data” always seems to be up for debate, the importance of protecting said data is not. Database administrators set up databases according to a company’s requirements, in addition to maintaining its operations and implementing the appropriate security measures. ",
+        "image": "TKTK",
+        "projected-jobs": "10,500",
+        "median-salary": "$90,070",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/database-administrator"
+    },
+    {
+        "title": "Financial Advisor",
+        "rank": "31",
+        "description": "Financial advisors counsel clients on their finances. Their responsibilities include creating budgets and retirement plans, providing investing advice and even investing on behalf of a client.",
+        "image": "TKTK",
+        "projected-jobs": "19,100",
+        "median-salary": "$88,890",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/financial-advisor"
+    },
+    {
+        "title": "Mechanical Engineer",
+        "rank": "32",
+        "description": "Someone with a mechanical engineering degree has many job options for his or her career path. The skills of a mechanical engineer are needed in many industries and on many types of projects, from vehicle manufacturing to nanotechnology. Mechanical engineers are involved in the production of mechanical instruments and tools from start to finish, and their work includes aspects of design, development and testing.",
+        "image": "TKTK",
+        "projected-jobs": "12,800",
+        "median-salary": "$87,370",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/mechanical-engineer"
+    },
+    {
+        "title": "Civil Engineer",
+        "rank": "33",
+        "description": "From the street in front of your home to the Golden Gate Bridge, civil engineers are responsible for the design and maintenance of public works and facilities. Civil engineers are involved from start to finish in the process of constructing buildings, bridges and roads.",
+        "image": "TKTK",
+        "projected-jobs": "20,500",
+        "median-salary": "$86,640",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/civil-engineer"
+    },
+    {
+        "title": "Psychiatrist",
+        "rank": "34",
+        "description": "Performing evaluations far beyond the “How does that make you feel?” question asked in movies, psychiatrists are primary mental health physicians who diagnose and treat mental illnesses. Psychiatrists’ methods include personal counseling, hospitalization and medication.",
+        "image": "TKTK",
+        "projected-jobs": "4,500",
+        "median-salary": "$208,000",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/psychiatrist"
+    },
+    {
+        "title": "Substance Abuse and Behavioral Disorder Counselor",
+        "rank": "35",
+        "description": "Counselors provide treatment for their patients while also possibly running outreach programs.",
+        "image": "TKTK",
+        "projected-jobs": "68,500",
+        "median-salary": "$44,630",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/substance-abuse-counselor"
+    },
+    {
+        "title": "School Psychologist",
+        "rank": "36",
+        "description": "School psychologists can bear a heavy load, assisting students who might be struggling academically or emotionally. You must hold a master’s degree and love helping others, and many in this field find the work rewarding.",
+        "image": "TKTK",
+        "projected-jobs": "23,800",
+        "median-salary": "$76,990",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/school-psychologist"
+    },
+    {
+        "title": "Home Health Aide",
+        "rank": "37",
+        "description": "Home health aides are trained to assist individuals with diabetes, chronic illness or cognitive impairment with the daily activities many people take for granted. ",
+        "image": "TKTK",
+        "projected-jobs": "304,800",
+        "median-salary": "$24,200",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/home-health-aide"
+    },
+    {
+        "title": "Information Security Analyst",
+        "rank": "38",
+        "description": "As concern about cybersecurity grows, so does the demand for information security analysts. It is the duty of these professionals to prepare and carry out security measures that protect a company’s computer networks and systems. ",
+        "image": "TKTK",
+        "projected-jobs": "35,500",
+        "median-salary": "$98,350",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/information-security-analyst"
+    },
+    {
+        "title": "Pilot",
+        "rank": "39",
+        "description": "Pilots fly and operate aircraft, including airplanes, helicopters and military aircraft. Pilots work for passenger and cargo airlines of various sizes, corporations, wealthy individuals, and law enforcement agencies.",
+        "image": "TKTK",
+        "projected-jobs": "7,000",
+        "median-salary": "$115,670",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/pilot"
+    },
+    {
+        "title": "Respiratory Therapist",
+        "rank": "40",
+        "description": "This occupation requires only an associate degree for entry and can be both challenging and gratifying. Respiratory therapists examine and treat those who have breathing disorders or respiratory diseases.",
+        "image": "TKTK",
+        "projected-jobs": "27,900",
+        "median-salary": "$60,280",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/respiratory-therapist"
+    },
+    {
+        "title": "Diagnostic Medical Sonographer",
+        "rank": "41",
+        "description": "While people often associate sonograms with babies, diagnostic medical sonographers also create images of organs and tissues to help diagnose medical conditions. ",
+        "image": "TKTK",
+        "projected-jobs": "14,200",
+        "median-salary": "$72,510",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/diagnostic-medical-sonographer"
+    },
+    {
+        "title": "Accountant",
+        "rank": "42",
+        "description": "Accountants are at your service during tax season and beyond, preparing taxes, performing audits and offering consulting.",
+        "image": "TKTK",
+        "projected-jobs": "90,700",
+        "median-salary": "$70,500",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/accountant"
+    },
+    {
+        "title": "Market Research Analyst",
+        "rank": "43",
+        "description": "Knowing what customers want is essential in running a business, and market research analysts help companies do just that. Typical responsibilities include monitoring and forecasting marketing and sales trends, measuring the effectiveness of marketing programs and strategies, gathering and analyzing data, and preparing and presenting reports to both clients and management.",
+        "image": "TKTK",
+        "projected-jobs": "139,200",
+        "median-salary": "$63,120",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/market-research-analyst"
+    },
+    {
+        "title": "Business Operations Manager",
+        "rank": "44",
+        "description": "Business operations managers are a business’s go-to person. These managers assist companies of all sizes with hiring, negotiating contacts, budgeting and strategic decision-making regarding consumer purchases. ",
+        "image": "TKTK",
+        "projected-jobs": "165,000",
+        "median-salary": "$100,930",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/business-operations-manager"
+    },
+    {
+        "title": "Marketing Manager",
+        "rank": "45",
+        "description": "In the world of buying and selling, marketing managers are responsible for figuring out the price, so they can help organizations maximize their profits. They also make sure a company's customers are satisfied, estimate the demand for the company's products and services and determine possible markets for those products.",
+        "image": "TKTK",
+        "projected-jobs": "20,900",
+        "median-salary": "$134,290",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/marketing-manager"
+    },
+    {
+        "title": "Industrial Psychologist",
+        "rank": "46",
+        "description": "Industrial psychologists aim to find solutions for organizations after evaluating the problems the organization faces. These professionals typically run their own small businesses and work for consulting firms, corporations, hospitals and the government.",
+        "image": "TKTK",
+        "projected-jobs": "200",
+        "median-salary": "$97,260",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/industrial-psychologist"
+    },
+    {
+        "title": "Podiatrist",
+        "rank": "47",
+        "description": "If a medical professional is treating or operating on your feet, ankles or lower legs, they most likely are a podiatrist. A podiatrist’s responsibilities include assessing the patient’s lower extremities, diagnosing problems, performing surgeries and prescribing medications.",
+        "image": "TKTK",
+        "projected-jobs": "600",
+        "median-salary": "$129,550",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/podiatrist"
+    },
+    {
+        "title": "Environmental Engineer",
+        "rank": "48",
+        "description": "Environmental engineers combine knowledge of engineering, soil science, biology and chemistry to solve environmental problems. A huge part of the job is working to improve recycling, waste disposal, public health, water and air pollution control.",
+        "image": "TKTK",
+        "projected-jobs": "2,900",
+        "median-salary": "$87,620",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/environmental-engineer"
+    },
+    {
+        "title": "Social and Community Service Manager",
+        "rank": "49",
+        "description": "A profession that takes commitment and passion, social and community service management involves working with specific groups or communities to address issues.",
+        "image": "TKTK",
+        "projected-jobs": "21,900",
+        "median-salary": "$65,320",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/social-and-community-service-manager"
+    },
+    {
+        "title": "Lawyer",
+        "rank": "50",
+        "description": "While not all legal proceedings resemble a scene from “Law & Order,” law is still an exciting profession. Lawyers both advise and represent clients in settings ranging from courts to government agency buildings. Lawyers also research and analyze legal issues; interpret laws, rulings and regulations; and present facts and argue on behalf of clients. ",
+        "image": "TKTK",
+        "projected-jobs": "50,100",
+        "median-salary": "$120,910",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/lawyer"
+    },
+    {
+        "title": "Marriage and Family Therapist",
+        "rank": "51",
+        "description": "Many people can develop problems relating to their spouse, partner, children  or other family members. When these issues occur, marriage and family therapists can often be a source of support and conflict resolution.",
+        "image": "TKTK",
+        "projected-jobs": "12,300",
+        "median-salary": "$50,090",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/marriage-and-family-therapist"
+    },
+    {
+        "title": "Medical Assistant",
+        "rank": "52",
+        "description": "During most medical exams, a physician or specialist isn’t the only person you’ll see. A medical assistant measures your vital signs, administers injections or medications and schedules appointments. These professionals also prepare blood samples for lab tests, record your patient history and enter your information in your medical records.",
+        "image": "TKTK",
+        "projected-jobs": "154,900",
+        "median-salary": "$33,610",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/medical-assistant"
+    },
+    {
+        "title": "Computer Systems Analyst",
+        "rank": "53",
+        "description": "Computer systems analysts must have a diverse skill set. The position requires information technology and business knowledge. These analysts custom design computer systems and processes for clients.",
+        "image": "TKTK",
+        "projected-jobs": "56,000",
+        "median-salary": "$88,740",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/computer-systems-analyst"
+    },
+    {
+        "title": "Actuary",
+        "rank": "54",
+        "description": "Are you more of a risk calculator than a risk taker? Consider working as an actuary. These professionals are experts in uncertainty, using mathematics, statistics and financial theory to measure, manage and mitigate financial risk.",
+        "image": "TKTK",
+        "projected-jobs": "5,000",
+        "median-salary": "$102,880",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/actuary"
+    },
+    {
+        "title": "Medical Records Technician",
+        "rank": "55",
+        "description": "Medical records technicians are extremely detail-oriented professionals who use information from medical records to assign diagnosis and procedure codes. Their work is essential for patients’ reimbursement claims, research and tracking and monitoring disease patterns.",
+        "image": "TKTK",
+        "projected-jobs": "23,100",
+        "median-salary": "$40,350",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/medical-records-technician"
+    },
+    {
+        "title": "Prosthodontist",
+        "rank": "56",
+        "description": "Prosthodontists are essentially responsible for repairing and restoring people’s smiles. These dental professionals improve and replace teeth.",
+        "image": "TKTK",
+        "projected-jobs": "0",
+        "median-salary": "$176,540",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/prosthodontist"
+    },
+    {
+        "title": "Construction Manager",
+        "rank": "57",
+        "description": "Construction managers help plan projects, estimate cost, team-up with laborers during the production stage and more.",
+        "image": "TKTK",
+        "projected-jobs": "46,200",
+        "median-salary": "$93,370",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/construction-manager"
+    },
+    {
+        "title": "Veterinary Technologist and Technician",
+        "rank": "58",
+        "description": "This job is not necessarily glamorous, but your commitment to animals is a must. Veterinary technologists and technicians might handle such responsibilities as lab work or surgery assistance.",
+        "image": "TKTK",
+        "projected-jobs": "21,100",
+        "median-salary": "$34,420",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/veterinary-technologist-and-technician"
+    },
+    {
+        "title": "Landscaper and Groundskeeper",
+        "rank": "59",
+        "description": "Landscapers plant trees, shrubs and flowers; fertilize plants; and construct outdoor walkways, patios and fences to surround their handiwork. Groundskeepers might also garden and plant, but they also paint fences, clean swimming pools, shovel snow and handle refuse removal.",
+        "image": "TKTK",
+        "projected-jobs": "106,400",
+        "median-salary": "$29,000",
+        "education-needed": "Not required",
+        "link": "https://money.usnews.com/careers/best-jobs/landscaper-and-groundskeeper"
+    },
+    {
+        "title": "Computer Network Architect",
+        "rank": "60",
+        "description": "If you've ever saved something to the cloud, then you've depended on the handiwork of a computer network architect. These professionals design, build and maintain a variety of data communication networks, from expansive cloud infrastructures to smaller intranets.",
+        "image": "TKTK",
+        "projected-jobs": "8,400",
+        "median-salary": "$109,020",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/computer-network-architect"
+    },
+    {
+        "title": "Orthotist and Prosthetist",
+        "rank": "61",
+        "description": "Orthotists and prosthetists are the designers behind artificial limbs, including arms, hands, legs and feet, as well as body braces and other medical and surgical devices. Also known as O&P professionals, they work directly with patients in order to design and fit the devices, and instruct them on use.",
+        "image": "TKTK",
+        "projected-jobs": "1,800",
+        "median-salary": "$69,120",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/orthotist-and-prosthetist"
+    },
+    {
+        "title": "Personal Care Aide",
+        "rank": "62",
+        "description": "Compassion is the top asset for those interested in being a personal care aide. These professionals assist people with physical and mental disabilities and chronic illness, and perform non-medical daily tasks.",
+        "image": "TKTK",
+        "projected-jobs": "881,000",
+        "median-salary": "$24,020",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/personal-care-aide"
+    },
+    {
+        "title": "Computer Systems Administrator",
+        "rank": "63",
+        "description": "Computer systems administrators perform duties ranging from identifying and fixing network issues to updating equipment and software.",
+        "image": "TKTK",
+        "projected-jobs": "18,200",
+        "median-salary": "$82,050",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/network-and-computer-systems-administrator"
+    },
+    {
+        "title": "Massage Therapist",
+        "rank": "64",
+        "description": "Nothing is as relaxing as a good massage. But massage therapists aren’t just responsible for helping people luxuriate or relieve stress. They also provide relief from painful medical conditions, heal injuries and improve circulation. ",
+        "image": "TKTK",
+        "projected-jobs": "35,400",
+        "median-salary": "$41,420",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/massage-therapist"
+    },
+    {
+        "title": "Cartographer",
+        "rank": "65",
+        "description": "A modern road trip may not include nearly as many paper maps as it used to, but cartographers, who are map artists in a sense, are still in demand as online maps and GPS technologies continue to change and develop.",
+        "image": "TKTK",
+        "projected-jobs": "1,700",
+        "median-salary": "$64,430",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/cartographer"
+    },
+    {
+        "title": "Dental Assistant",
+        "rank": "66",
+        "description": "Dental assistants prepare patients for treatments and teeth cleanings, sterilize instruments and assist dentists during procedures.",
+        "image": "TKTK",
+        "projected-jobs": "38,700",
+        "median-salary": "$38,660",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/dental-assistant"
+    },
+    {
+        "title": "Management Analyst",
+        "rank": "67",
+        "description": "Time really is money. Management analysts work with companies to improve overall efficiency, proposing plans to increase profitability, reduce costs and increase revenue.",
+        "image": "TKTK",
+        "projected-jobs": "118,300",
+        "median-salary": "$83,610",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/management-analyst"
+    },
+    {
+        "title": "Solar Photovoltaic Installer",
+        "rank": "68",
+        "description": "Solar photovoltaic installers put together, implement and maintain solar panels on the rooftops of homes and other buildings.",
+        "image": "TKTK",
+        "projected-jobs": "6,100",
+        "median-salary": "$42,680",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/solar-photovoltaic-installer"
+    },
+    {
+        "title": "Physical Therapist Aide",
+        "rank": "69",
+        "description": "Physical therapist aides support physical therapists, professionals who assist injured or ill people with movement and pain. Aides set up treatment areas and therapy equipment, assist patients as they move to and from therapy areas and perform clerical duties.",
+        "image": "TKTK",
+        "projected-jobs": "11,300",
+        "median-salary": "$26,240",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/physical-therapy-aide"
+    },
+    {
+        "title": "Occupational Therapy Assistant",
+        "rank": "70",
+        "description": "Occupational therapists rely on occupational therapy assistants to help patients with therapeutic activities and exercises, teach patients to use special equipment and record patients’ progress in their treatment.",
+        "image": "TKTK",
+        "projected-jobs": "14,500",
+        "median-salary": "$60,220",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/occupational-therapy-assistant"
+    },
+    {
+        "title": "Mental Health Counselor",
+        "rank": "71",
+        "description": "Maintaining good mental health is just as important in day-to-day life as maintaining good physical health. Mental health counselors help people cope with and beat things like depression, stress and anxiety. ",
+        "image": "TKTK",
+        "projected-jobs": "22,300",
+        "median-salary": "$44,840",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/mental-health-counselor"
+    },
+    {
+        "title": "Environmental Engineering Technician",
+        "rank": "72",
+        "description": "Environmental engineering technician positions are ideal for team-oriented workers, as these professionals collaborate with other technicians and engineers to develop plans and create devices to reduce environmental pollution.",
+        "image": "TKTK",
+        "projected-jobs": "1,500",
+        "median-salary": "$50,560",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/environmental-engineering-technician"
+    },
+    {
+        "title": "Nail Technician",
+        "rank": "73",
+        "description": "No day at the spa is complete without a mani-pedi, and a good one requires the work of a skilled nail technician. These professionals clean, trim and shape your nails, remove dead skin and calluses on your feet, massage your hands and paint your nails. ",
+        "image": "TKTK",
+        "projected-jobs": "15,700",
+        "median-salary": "$24,330",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/nail-technician"
+    },
+    {
+        "title": "Plumber",
+        "rank": "74",
+        "description": "Plumbers also plan and develop blueprints for new structures or those being refurbished.",
+        "image": "TKTK",
+        "projected-jobs": "68,200",
+        "median-salary": "$53,910",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/plumber"
+    },
+    {
+        "title": "Radiologic Technologist",
+        "rank": "75",
+        "description": "Radiologic technologists are on their feet much of the day, assisting radiologists by taking medical images and giving radiation therapy treatments.",
+        "image": "TKTK",
+        "projected-jobs": "19,000",
+        "median-salary": "$59,520",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/radiologic-technologist"
+    },
+    {
+        "title": "MRI Technologist",
+        "rank": "76",
+        "description": "Anyone who has ever spent time in the big tube in an MRI machine had a capable MRI technologist to ease them through the process. These professionals run the MRI scanner to obtain images of what's going on inside your body, and they might inject you with dyes to help the physician better see a potential problem.",
+        "image": "TKTK",
+        "projected-jobs": "4,300",
+        "median-salary": "$71,670",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/mri-technologist"
+    },
+    {
+        "title": "Chiropractor",
+        "rank": "77",
+        "description": "From temporary back injuries to pain caused by chronic illness, chiropractors are trained to treat the musculoskeletal system without drugs or surgery.",
+        "image": "TKTK",
+        "projected-jobs": "3,700",
+        "median-salary": "$71,410",
+        "education-needed": "Doctorate",
+        "link": "https://money.usnews.com/careers/best-jobs/chiropractor"
+    },
+    {
+        "title": "Cost Estimator",
+        "rank": "78",
+        "description": "From the cost of your cell phone to that of government programs, cost estimators analyze how much products and services should cost. Cost estimators also analyze the current cost of something, in addition to why a product or service costs more or less than previous estimates determined.",
+        "image": "TKTK",
+        "projected-jobs": "18,700",
+        "median-salary": "$64,040",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/cost-estimator"
+    },
+    {
+        "title": "Financial Analyst",
+        "rank": "79",
+        "description": "Buy? Sell? It’s a financial analyst’s job to recommend what clients should do with their investments, in addition to compiling reports that explain their investment analyses.",
+        "image": "TKTK",
+        "projected-jobs": "20,300",
+        "median-salary": "$85,660",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/financial-analyst"
+    },
+    {
+        "title": "Insurance Sales Agent",
+        "rank": "80",
+        "description": "Insurance sales agents are the go-to source for the different insurance policies that are available. These agents typically contact potential customers in order to sell various insurance types.",
+        "image": "TKTK",
+        "projected-jobs": "48,300",
+        "median-salary": "$50,600",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/insurance-agent"
+    },
+    {
+        "title": "School Counselor",
+        "rank": "81",
+        "description": "This can be one of the most gratifying professions, as school counselors see students move forward in life and achieve great things. The necessary training varies by state, however, most hold a master’s degree.",
+        "image": "TKTK",
+        "projected-jobs": "27,200",
+        "median-salary": "$56,310",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/school-counselor"
+    },
+    {
+        "title": "Nurse Midwife",
+        "rank": "82",
+        "description": "From assistance during childbirth to reproductive care, nurse midwives provide a variety of gynecological and family planning services. Nurse midwives can serve as primary care providers for women and infants as well.",
+        "image": "TKTK",
+        "projected-jobs": "1,000",
+        "median-salary": "$103,770",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/nurse-midwife"
+    },
+    {
+        "title": "Paralegal",
+        "rank": "83",
+        "description": "A lawyer’s workload is rarely small, which is where paralegals come in. These professionals support lawyers by maintaining and organizing legal files, doing research and drafting documents.",
+        "image": "TKTK",
+        "projected-jobs": "39,000",
+        "median-salary": "$50,940",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/paralegal"
+    },
+    {
+        "title": "Phlebotomist",
+        "rank": "83",
+        "description": "Phlebotomists work in labs, doctors’ offices and blood donor centers where they draw blood, ensuring it’s done properly.",
+        "image": "TKTK",
+        "projected-jobs": "29,500",
+        "median-salary": "$34,480",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/phlebotomist"
+    },
+    {
+        "title": "Loan Officer",
+        "rank": "85",
+        "description": "From car loans to mortgages to business loans, loans are an inevitable part of the daily lives of Americans. A loan officer is a major player in the loan application and approval process. These officers evaluate, authorize or recommend loan application approval for individuals and businesses.",
+        "image": "TKTK",
+        "projected-jobs": "24,300",
+        "median-salary": "$63,040",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/loan-officer"
+    },
+    {
+        "title": "Clinical Social Worker",
+        "rank": "86",
+        "description": "Clinical social workers work with patients to diagnose and treat mental, behavioral and emotional disorders through individual, group and couples therapy.",
+        "image": "TKTK",
+        "projected-jobs": "30,600",
+        "median-salary": "$56,200",
+        "education-needed": "Master's",
+        "link": "https://money.usnews.com/careers/best-jobs/clinical-social-worker"
+    },
+    {
+        "title": "Compliance Officer",
+        "rank": "87",
+        "description": "Employment in this job spans across many industries, but generally the duties are the same: These performance auditors ensure ethics are practiced, laws are followed and regulations are met.",
+        "image": "TKTK",
+        "projected-jobs": "18,600",
+        "median-salary": "$68,860",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/compliance-officer"
+    },
+    {
+        "title": "Dietitian and Nutritionist",
+        "rank": "88",
+        "description": "Dietitians and nutritionists help clients with almost every aspect of their diet, assisting with food choice, meal plans, lifestyle and nutritional goals.",
+        "image": "TKTK",
+        "projected-jobs": "8,000",
+        "median-salary": "$60,370",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/dietitian-and-nutritionist"
+    },
+    {
+        "title": "Ophthalmic Medical Technician",
+        "rank": "89",
+        "description": "Ophthalmic medical technicians often train on the job to perform the first part of a patient’s eye examination.",
+        "image": "TKTK",
+        "projected-jobs": "8,900",
+        "median-salary": "$36,530",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/ophthalmic-medical-technician"
+    },
+    {
+        "title": "Clinical Laboratory Technician",
+        "rank": "90",
+        "description": "While you may not meet a clinical laboratory technician at the hospital or doctor’s office, these medical professionals play a major role in your medical care. Physicians use the results of the tests and the analysis that clinical laboratory technicians conduct to diagnose patients.",
+        "image": "TKTK",
+        "projected-jobs": "35,100",
+        "median-salary": "$52,330",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/clinical-laboratory-technician"
+    },
+    {
+        "title": "Licensed Practical and Licensed Vocational Nurse",
+        "rank": "91",
+        "description": "Basic medical care is essential, and licensed practical and licensed vocational nurses provide this care under the guidance of registered nurses and doctors. Duties include monitoring patients’ health, offering basic patient care and comfort, discussing the care provided with patients, and reporting patients’ health status and concerns to the appropriate nurses and doctors.",
+        "image": "TKTK",
+        "projected-jobs": "78,100",
+        "median-salary": "$46,240",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/licensed-practical-and-licensed-vocational-nurse"
+    },
+    {
+        "title": "Electrician",
+        "rank": "92",
+        "description": "Electricians design, install, maintain and repair motors, equipment or electrical systems for businesses and residences.",
+        "image": "TKTK",
+        "projected-jobs": "74,100",
+        "median-salary": "$55,190",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/electrician"
+    },
+    {
+        "title": "HR Specialist",
+        "rank": "93",
+        "description": "If you have a job, you’ve likely interacted with an HR specialist. These human resources personnel recruit, screen, interview and place employees, in addition to taking care of employee relations tasks.",
+        "image": "TKTK",
+        "projected-jobs": "28,900",
+        "median-salary": "$60,870",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/hr-specialist"
+    },
+    {
+        "title": "Wind Turbine Technician",
+        "rank": "94",
+        "description": "Generating electricity through wind turbines is becoming more prevalent. Wind turbine technicians typically learn the trade at a technical school, and they work outside repairing, maintaining and installing wind turbines.",
+        "image": "TKTK",
+        "projected-jobs": "3,800",
+        "median-salary": "$54,370",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/wind-turbine-technician"
+    },
+    {
+        "title": "Logistician",
+        "rank": "95",
+        "description": "A logistician is involved in every aspect of a product’s life, including design, purchase, transportation, inventory and warehousing. ",
+        "image": "TKTK",
+        "projected-jobs": "8,400",
+        "median-salary": "$74,600",
+        "education-needed": "Bachelor's",
+        "link": "https://money.usnews.com/careers/best-jobs/logistician"
+    },
+    {
+        "title": "Residential Advisor",
+        "rank": "96",
+        "description": "Residential advisors are supervisors to college or university residence halls where they assist students with any problems or issues that come up.",
+        "image": "TKTK",
+        "projected-jobs": "13,900",
+        "median-salary": "$27,860",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/residential-advisor"
+    },
+    {
+        "title": "Optician",
+        "rank": "97",
+        "description": "After seeing an optometrist or ophthalmologist for an eye appointment, patients might also end up seeing an optician. Opticians help patients choose and fit glasses and contact lenses.",
+        "image": "TKTK",
+        "projected-jobs": "5,400",
+        "median-salary": "$37,010",
+        "education-needed": "High School",
+        "link": "https://money.usnews.com/careers/best-jobs/optician"
+    },
+    {
+        "title": "Computer Support Specialist",
+        "rank": "98",
+        "description": "A computer support specialist’s job is a combination of customer service and troubleshooting. These specialists help computer owners and users troubleshoot and fix problems.",
+        "image": "TKTK",
+        "projected-jobs": "83,100",
+        "median-salary": "$53,470",
+        "education-needed": "Associate's",
+        "link": "https://money.usnews.com/careers/best-jobs/computer-support-specialist"
+    },
+    {
+        "title": "Esthetician and Skincare Specialist",
+        "rank": "99",
+        "description": "Estheticians and skin care specialists deal with many aspects of skin care, using treatments that include waxing, cleansing, exfoliating and even applying makeup.The duties of an executive assistant can be far more involved than those of an administrative assistant. Executive assistants complete important office management tasks and prepare and analyze reports.",
+        "image": "TKTK",
+        "projected-jobs": "7,800",
+        "median-salary": "$31,290",
+        "education-needed": "Postsecondary non-degree",
+        "link": "https://money.usnews.com/careers/best-jobs/esthetician-and-skincare-specialist"
+    },
+    {
+        "title": "Restaurant Cook",
+        "rank": "100",
+        "description": "A restaurant cook must learn cooking techniques and food preparation safety either before he or she starts or while on the job. The best jobs will be at upscale restaurants for those cooks who can plan and prepare more complex dishes.",
+        "image": "TKTK",
+        "projected-jobs": "299,000",
+        "median-salary": "$26,530",
+        "education-needed": "Not required",
+        "link": "https://money.usnews.com/careers/best-jobs/restaurant-cook"
+    }
+]
