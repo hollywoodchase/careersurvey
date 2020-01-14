@@ -2,10 +2,12 @@ import React, { Component } from "react";
 
 class Survey extends Component {
     // Setting the component's initial state
-    state = {
-        Q1: "",
-        Q2: ""
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+          
+        };
+      }
 
 
     handleInputChange = event => {
