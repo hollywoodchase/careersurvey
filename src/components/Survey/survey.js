@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import axios from 'axios';
+
 
 class Survey extends Component {
     // Setting the component's initial state
@@ -62,11 +64,11 @@ class Survey extends Component {
                 environment: this.state.environment,
                 hands: this.state.hands
             };
-            axios.post(`/api/surveyResults`, { user })
-                .then(res => {
-                console.log(res);
-                console.log(res.data);
-      })
+    //         axios.post(`/api/surveyResults`, { user })
+    //             .then(res => {
+    //             console.log(res);
+    //             console.log(res.data);
+    //   })
         }
 
         
