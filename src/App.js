@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Route, Link } from 'react-router-dom'
+
 // components
 import Signup from './components/sign-up'
 import LoginForm from './components/login-form'
@@ -8,7 +9,7 @@ import Navbar from './components/navbar'
 import Home from './components/home'
 import Survey from './components/Survey/survey'
 import Results from './components/Survey/surveyResultsPage'
-import Surveybuttons from './components/Survey/surveyButtons';
+import Jobs from './components/jobs';
 
 class App extends Component {
   constructor() {
@@ -72,9 +73,6 @@ class App extends Component {
           exact path="/"
           component={Home}
         />
-
-     <Surveybuttons/>
-
         <Route
           path="/login"
           render={() =>
@@ -87,6 +85,7 @@ class App extends Component {
           render={() =>
             <Signup />}
         />
+        <Route exact path="/jobs" component={Jobs} />
         <Route exact path="/survey" component={Survey} />
         <Route exact path="/results" component={Results} />
 
