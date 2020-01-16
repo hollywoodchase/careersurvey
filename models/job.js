@@ -10,18 +10,18 @@ const jobSchema = new Schema({
     hourlyWage: { type: String, required: true },
     rent: { type: String, required: true },
     link: { type: String, required: true },
-    shift: { type: String, required: true },
-    income: { type: String, required: true },
-    tech: { type: Boolean, required: true },
-    health: { type: String, required: true },
-    education: { type: String, required: true },
-    people: { type: Boolean, required: true },
-    subject: { type: String, required: true },
-    build: { type: String, required: true },
-    priority: { type: String, required: true },
-    where: { type: String, required: true },
-    environment: { type: Boolean, required: true },
-    hands: { type: Boolean, required: true }
+    questionShift: { type: String, required: true },
+    questionIncome: { type: String, required: true },
+    questionTech: { type: Boolean, required: true },
+    questionHealth: { type: String, required: true },
+    questionEducation: { type: String, required: true },
+    questionPeople: { type: Boolean, required: true },
+    questionSubject: { type: String, required: true },
+    questionBuild: { type: String, required: true },
+    questionPriority: { type: String, required: true },
+    questionWhere: { type: String, required: true },
+    questionEnvironment: { type: Boolean, required: true },
+    questionHands: { type: Boolean, required: true }
 });
 
 const Job = mongoose.model("Job", jobSchema);
