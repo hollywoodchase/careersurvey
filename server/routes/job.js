@@ -11,7 +11,22 @@ router.post('/api/jobs', (req, res) => {
     })
 });
 
-// router.get('/');
+router.get('/:id', (req, res) => {
+    Job.findAll({
+        questionShift: q1,
+        questionIncome: q2,
+        questionTech: q3,
+        questionHealth: q4,
+        questionEducation: { type: String, required: true },
+        questionPeople: { type: Boolean, required: true },
+        questionSubject: { type: String, required: true },
+        questionBuild: { type: String, required: true },
+        questionPriority: { type: String, required: true },
+        questionWhere: { type: String, required: true },
+        questionEnvironment: { type: Boolean, required: true },
+        questionHands: { type: Boolean, required: true }
+    })
+});
 
 
 
