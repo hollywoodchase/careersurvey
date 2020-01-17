@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ReactDOM from "react-dom";
 import "./survey.css";
 import qBank from "./questionFile";
+import axios from "axios";
 
 class Survey extends Component {
     state = {
@@ -67,17 +67,17 @@ class Survey extends Component {
             if (selectedBtn) {
                 btnStyle = "btn-chosen"
             }
-                return (<button key={index} className={`btn btn-block ${btnStyle}`} questionid={questionId} onBlur={this.toggleBtnClass} onClick={
-                    this.setSelectedAnswers
-                }>
-                    {text}
-                </button>)
-    })
+            return (<button key={index} className={`btn btn-block ${btnStyle}`} questionid={questionId} onBlur={this.toggleBtnClass} onClick={
+                this.setSelectedAnswers
+            }>
+                {text}
+            </button>)
+        })
     }
 
     render() {
         return (
-            <div className="container">
+            <div className="container" >
                 <div className="title">Career Survey</div>
 
                 {this.state.questionBank.length > 0 &&
@@ -89,12 +89,13 @@ class Survey extends Component {
                                 {this.makeAnswerButtons(answers, questionId)}
                             </div>
 
-                    )}
-                <div className="questionBox">
+                    )
+                }
+                < div className="questionBox" >
                     <button className="btn btn-success btn-block" onClick={this.submitAnswers}>Submit</button>
-                </div>
+                </div >
 
-            </div>
+            </div >
         );
     }
 }
