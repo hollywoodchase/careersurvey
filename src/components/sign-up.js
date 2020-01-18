@@ -58,7 +58,7 @@ render() {
 			<form className="form-horizontal">
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="username">Username</label>
+						<label className="form-label" htmlFor="username">Username:</label>
 					</div>
 					<div className="col-3 col-mr-auto">
 						<input className="form-input"
@@ -75,7 +75,7 @@ render() {
 
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="password">Password: </label>
+						<label className="form-label" htmlFor="password">Password:</label>
 					</div>
 					<div className="col-3 col-mr-auto">
 						<input className="form-input"

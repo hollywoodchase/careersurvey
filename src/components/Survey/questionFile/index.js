@@ -61,7 +61,7 @@ const qBank = [
 },
 {
     question: "Do you enjoy hands-on work?",
-    answers: ["Yes, I am very hands on", "I will if I have to, but I rather not", "No, I rather not work with my hands", "Absolutely not"],
+    answers: ["Yes, I am very hands on", "I will if I have to, but I'd rather not", "No, I'd rather not work with my hands", "Absolutely not"],
     questionId: 13
 }
 ];

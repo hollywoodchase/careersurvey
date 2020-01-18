@@ -7,19 +7,19 @@ mongoose.promise = Promise
 const userSchema = new Schema({
 	username: { type: String, unique: false, required: false },
 	password: { type: String, unique: false, required: false },
-	shift: { type: String, required: true },
-	income: { type: String, required: true },
-	tech: { type: String, required: true },
-	health: { type: String, required: true },
-	oralCare: { type: String, required: true },
-	education: { type: String, required: true },
-	people: { type: String, required: true },
-	subject: { type: String, required: true },
-	build: { type: String, required: true },
-	priority: { type: String, required: true },
-	where: { type: String, required: true },
-	environment: { type: String, required: true },
-	hands: { type: String, required: true }
+	shift: { type: String },
+	income: { type: String },
+	tech: { type: String },
+	health: { type: String },
+	oralCare: { type: String },
+	education: { type: String },
+	people: { type: String},
+	subject: { type: String },
+	build: { type: String },
+	priority: { type: String },
+	where: { type: String },
+	environment: { type: String},
+	hands: { type: String }
 })
 
 // Define schema methods
