@@ -4,31 +4,32 @@ const Job = require('../database/models/job')
 const User = require('../database/models/user')
 const passport = require('../passport')
 
-
-
-router.post('/jobs', (req, res) => {
-    Job.findAll({}, (err, response) => {
-        res.json(response);
-    })
-});
+let finalResult = {};
 
 router.post('/surveyComplete', (req, res) => {
 
+    // console.log('lalala1');
+    // console.log(req.user._id);
+
     // console.log(req.body.result[0].answertext);
     User.update({
-        shift: req.body.result[0].answertext,
-        income: req.body.result[1].answertext,
-        tech: req.body.result[2].answertext,
-        health: req.body.result[3].answertext,
-        oralCare: req.body.result[4].answertext,
-        educationNeeded: req.body.result[5].answertext,
-        people: req.body.result[6].answertext,
-        subject: req.body.result[7].answertext,
-        build: req.body.result[8].answertext,
-        priority: req.body.result[9].answertext,
-        where: req.body.result[10].answertext,
-        environment: req.body.result[11].answertext,
-        hands: req.body.result[12].answertext
+        _id: req.user._id
+    }, {
+        $set: {
+            shift: req.body.result[0].answertext,
+            income: req.body.result[1].answertext,
+            tech: req.body.result[2].answertext,
+            health: req.body.result[3].answertext,
+            oralCare: req.body.result[4].answertext,
+            educationNeeded: req.body.result[5].answertext,
+            people: req.body.result[6].answertext,
+            subject: req.body.result[7].answertext,
+            build: req.body.result[8].answertext,
+            priority: req.body.result[9].answertext,
+            where: req.body.result[10].answertext,
+            environment: req.body.result[11].answertext,
+            hands: req.body.result[12].answertext
+        }
     }, (err, result) => {
         if (err) {
             console.log(err);
@@ -37,14 +38,9 @@ router.post('/surveyComplete', (req, res) => {
             console.log(result);
         }
     });
-    // console.log(req.body.result);
+    // console.log('hihihihi7');
+    // console.log(req.user);
 
-    //update user to have survey results
-
-    // define categories in an array 
-    // loop over categories to find matches
-    //set matches to an object
-    //post object to database
 
     let result = req.body.result;
     for (let i = 0; i < result.length; i++) {
@@ -65,6 +61,8 @@ router.post('/surveyComplete', (req, res) => {
             result[i].income = 'vacation';
         } else if (res === '0' || res === '1-2') {
             result[i].tech = false;
+        } else if (res === '3-5' || res === '6-8') {
+            result[i].tech = true;
         } else if (res === 'Totally grossed out' || res === "Don’t mind blood but don’t want to work with sick people") {
             result[i].health = false;
         } else if (res === 'No problem with sick people but don’t want to work with blood') {
@@ -128,107 +126,106 @@ router.post('/surveyComplete', (req, res) => {
         } else if (res === "No, I'd rather not work with my hands" || res === "Absolutely not") {
             result[i].hands = false;
         }
-        console.log(req.body.result);
+        // console.log(req.body.result);
+        finalResult = req.body.result;
     }
 
 
-    // User.update({
-    //     questionShift: survey.shift,
-    //     questionIncome: q2,
-    //     questionTech: q3,
-    //     questionHealth: q4,
-    //     questionEducation: q5,
-    //     questionPeople: q6,
-    //     questionSubject: q7,
-    //     questionBuild: q8,
-    //     questionPriority: q9,
-    //     questionWhere: q10,
-    //     questionEnvironment: q11,
-    //     questionHands: q12 
-    // }, () => {
 
+    // router.get('/:id', (req, res) => {
+    //     Job.find({
+
+    //     })
     // });
 
 
+
+    // req.params.wantsTech or req.body
+
+
+    //     User.findOne({ username: username }, (err, user) => {
+    //         if (err) {
+    //             console.log('User.js post error: ', err)
+    //         } else if (user) {
+    //             res.json({
+    //                 error: `Sorry, there's already a user with the username: ${username}`
+    //             })
+    //         }
+    //         else {
+    //             const newUser = new User({
+    //                 username: username,
+    //                 password: password
+    //             })
+    //             newUser.save((err, savedUser) => {
+    //                 if (err) return res.json(err)
+    //                 res.json(savedUser)
+    //             })
+    //         }
+    //     })
+    // })
+
+    // router.post(
+    //     '/login',
+    //     function (req, res, next) {
+    //         console.log('routes/user.js, login, req.body: ');
+    //         console.log(req.body)
+    //         next()
+    //     },
+    //     passport.authenticate('local'),
+    //     (req, res) => {
+    //         console.log('logged in', req.user);
+    //         var userInfo = {
+    //             username: req.user.username
+    //         };
+    //         res.send(userInfo);
+    //     }
+    // )
+
+    // router.get('/', (req, res, next) => {
+    //     console.log('===== user!!======')
+    //     console.log(req.user)
+    //     if (req.user) {
+    //         res.json({ user: req.user })
+    //     } else {
+    //         res.json({ user: null })
+    //     }
+    // })
+
+    // router.post('/logout', (req, res) => {
+    //     if (req.user) {
+    //         req.logout()
+    //         res.send({ msg: 'logging out' })
+    //     } else {
+    //         res.send({ msg: 'no user to log out' })
+    //     }
+    // })
+
 });
 
-// router.get('/:id', (req, res) => {
-//     Job.find({
-//         questionShift: survey.shift,
-//         questionIncome: q2,
-//         questionTech: q3,
-//         questionHealth: q4,
-//         questionEducation: q5,
-//         questionPeople: q6,
-//         questionSubject: q7,
-//         questionBuild: q8,
-//         questionPriority: q9,
-//         questionWhere: q10,
-//         questionEnvironment: q11,
-//         questionHands: q12
-//     })
-// });
-
-
-
-// req.params.wantsTech or req.body
-
-
-//     User.findOne({ username: username }, (err, user) => {
-//         if (err) {
-//             console.log('User.js post error: ', err)
-//         } else if (user) {
-//             res.json({
-//                 error: `Sorry, there's already a user with the username: ${username}`
-//             })
-//         }
-//         else {
-//             const newUser = new User({
-//                 username: username,
-//                 password: password
-//             })
-//             newUser.save((err, savedUser) => {
-//                 if (err) return res.json(err)
-//                 res.json(savedUser)
-//             })
-//         }
-//     })
-// })
-
-// router.post(
-//     '/login',
-//     function (req, res, next) {
-//         console.log('routes/user.js, login, req.body: ');
-//         console.log(req.body)
-//         next()
-//     },
-//     passport.authenticate('local'),
-//     (req, res) => {
-//         console.log('logged in', req.user);
-//         var userInfo = {
-//             username: req.user.username
-//         };
-//         res.send(userInfo);
-//     }
-// )
-
-// router.get('/', (req, res, next) => {
-//     console.log('===== user!!======')
-//     console.log(req.user)
-//     if (req.user) {
-//         res.json({ user: req.user })
-//     } else {
-//         res.json({ user: null })
-//     }
-// })
-
-// router.post('/logout', (req, res) => {
-//     if (req.user) {
-//         req.logout()
-//         res.send({ msg: 'logging out' })
-//     } else {
-//         res.send({ msg: 'no user to log out' })
-//     }
-// })
+router.get('/jobs', (req, res) => {
+    console.log('tititi4');
+    console.log(finalResult[0].shift);
+    console.log(finalResult[1].income);
+    console.log(finalResult[2].tech);
+    Job.find({
+        questionShift: finalResult[0].shift,
+        questionIncome: finalResult[1].income,
+        questionTech: finalResult[2].tech
+        // questionHealth: finalResult[3].health,
+        // questionOralCare: finalResult[4].oralCare
+        // questionEducation: finalResult[5].education,
+        // questionPeople: finalResult[6].people,
+        // questionSubject: finalResult[7].subject,
+        // questionBuild: finalResult[8].build,
+        // questionPriority: finalResult[9].priority,
+        // questionWhere: finalResult[10].where,
+        // questionEnvironment: finalResult[11].environment,
+        // questionHands: finalResult[12].hands
+    }, (err, response) => {
+        res.send(response);
+        console.log('momomo6');
+        console.log(response);
+    })
+});
 
 module.exports = router
