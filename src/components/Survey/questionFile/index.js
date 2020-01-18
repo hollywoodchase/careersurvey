@@ -41,7 +41,7 @@ const qBank = [
 },
 {
     question: "Do you like to build things?",
-    answers: ["No", "Yes, using a computer", "Yes, when I am given specific instructions", "Yes, and I like to figure it out on my own"],
+    answers: ["Not really", "Yes, using a computer", "Yes, when I am given specific instructions", "Yes, and I like to figure it out on my own"],
     questionId: 9
 },
 {
