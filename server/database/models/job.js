@@ -12,16 +12,16 @@ const jobSchema = new Schema({
   link: { type: String, required: true },
   questionShift: { type: String, required: true },
   questionIncome: { type: String, required: true },
-  questionTech: { type: Boolean, required: true },
+  questionTech: { type: String, required: true },
   questionHealth: { type: String, required: true },
   questionEducation: { type: String, required: true },
-  questionPeople: { type: Boolean, required: true },
+  questionPeople: { type: String, required: true },
   questionSubject: { type: String, required: true },
   questionBuild: { type: String, required: true },
   questionPriority: { type: String, required: true },
   questionWhere: { type: String, required: true },
-  questionEnvironment: { type: Boolean, required: true },
-  questionHands: { type: Boolean, required: true }
+  questionEnvironment: { type: String, required: true },
+  questionHands: { type: String, required: true }
 });
 
 const Job = mongoose.model("Job", jobSchema);

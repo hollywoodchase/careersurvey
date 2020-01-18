@@ -64,15 +64,15 @@ router.post('/surveyComplete', (req, res) => {
         } else if (res === '3-5' || res === '6-8') {
             result[i].tech = true;
         } else if (res === 'Totally grossed out' || res === "Don’t mind blood but don’t want to work with sick people") {
-            result[i].health = false;
+            result[i].health = 'false';
         } else if (res === 'No problem with sick people but don’t want to work with blood') {
             result[i].health = 'psych';
         } else if (res === 'Would be willing to work with sick people and blood') {
-            result[i].health = true;
+            result[i].health = 'true';
         } else if (res === 'Yes') {
-            result[i].oralCare = true;
+            result[i].oralCare = 'true';
         } else if (res === 'No') {
-            result[i].oralCare = false;
+            result[i].oralCare = 'false';
         } else if (res === 'High School') {
             result[i].educationNeeded = 'highSchool';
         } else if (res === '2 years of college') {
@@ -82,9 +82,9 @@ router.post('/surveyComplete', (req, res) => {
         } else if (res === 'More than 4 years of college') {
             result[i].educationNeeded = 'advanced';
         } else if (res === "I always keep to myself" || res === "If someone talks to me I will respond") {
-            result[i].people = false;
+            result[i].people = 'false';
         } else if (res === "If I have a specific purpose I don’t mind talking to a stranger" || res === "I am willing to talk to anyone") {
-            result[i].people = true;
+            result[i].people = 'true';
         } else if (res === 'Math') {
             result[i].subject = 'math';
         } else if (res === 'Science') {
@@ -94,7 +94,7 @@ router.post('/surveyComplete', (req, res) => {
         } else if (res === 'English/History') {
             result[i].subject = 'englishHistory';
         } else if (res === 'Not really') {
-            result[i].build = false;
+            result[i].build = 'false';
         } else if (res === "Yes, using a computer") {
             result[i].build = 'tech';
         } else if (res === "Yes, when I am given specific instructions") {
@@ -118,13 +118,13 @@ router.post('/surveyComplete', (req, res) => {
         } else if (res === "A different place every shift") {
             result[i].where = 'different';
         } else if (res === "Who cares? The world is ending" || res === "Yes, but it’s too late, the damage is done") {
-            result[i].environment = false;
+            result[i].environment = 'false';
         } else if (res === "Yes, I try to make a difference in small ways" || res === "Yes, the future of our planet is important and we need to make big changes now") {
-            result[i].environment = true;
+            result[i].environment = 'true';
         } else if (res === "Yes, I am very hands on" || res === "I will if I have to, but I'd rather not") {
-            result[i].hands = true;
+            result[i].hands = 'true';
         } else if (res === "No, I'd rather not work with my hands" || res === "Absolutely not") {
-            result[i].hands = false;
+            result[i].hands = 'false';
         }
         // console.log(req.body.result);
         finalResult = req.body.result;
@@ -204,21 +204,21 @@ router.post('/surveyComplete', (req, res) => {
 
 router.get('/jobs', (req, res) => {
     // console.log('tititi4');
-    // console.log(finalResult);
+    console.log(finalResult);
     Job.find({
-        // questionShift: finalResult[0].shift,
-        // questionIncome: finalResult[1].income
-        questionTech: finalResult[2].tech
-        // questionHealth: finalResult[3].health,
-        // questionOralCare: finalResult[4].oralCare,
-        // questionEducation: finalResult[5].education,
-        // questionPeople: finalResult[6].people,
-        // questionSubject: finalResult[7].subject,
-        // questionBuild: finalResult[8].build,
-        // questionPriority: finalResult[9].priority,
-        // questionWhere: finalResult[10].where,
-        // questionEnvironment: finalResult[11].environment,
-        // questionHands: finalResult[12].hands
+        questionShift: finalResult[0].shift,
+        questionIncome: finalResult[1].income,
+        questionTech: finalResult[2].tech,
+        questionHealth: finalResult[3].health,
+        questionOralCare: finalResult[4].oralCare,
+        questionEducation: finalResult[5].education,
+        questionPeople: finalResult[6].people,
+        questionSubject: finalResult[7].subject,
+        questionBuild: finalResult[8].build,
+        questionPriority: finalResult[9].priority,
+        questionWhere: finalResult[10].where,
+        questionEnvironment: finalResult[11].environment,
+        questionHands: finalResult[12].hands
     }, (err, response) => {
         res.send(response);
         console.log('momomo6');
