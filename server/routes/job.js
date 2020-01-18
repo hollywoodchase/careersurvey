@@ -1,32 +1,97 @@
 const express = require('express')
 const router = express.Router()
 const Job = require('../database/models/job')
+const User = require('../database/models/user')
 const passport = require('../passport')
 
 
 
-router.post('/api/jobs', (req, res) => {
+router.post('/jobs', (req, res) => {
     Job.findAll({}, (err, response) => {
         res.json(response);
     })
 });
 
-router.get('/:id', (req, res) => {
-    Job.findAll({
-        questionShift: q1,
-        questionIncome: q2,
-        questionTech: q3,
-        questionHealth: q4,
-        questionEducation: { type: String, required: true },
-        questionPeople: { type: Boolean, required: true },
-        questionSubject: { type: String, required: true },
-        questionBuild: { type: String, required: true },
-        questionPriority: { type: String, required: true },
-        questionWhere: { type: String, required: true },
-        questionEnvironment: { type: Boolean, required: true },
-        questionHands: { type: Boolean, required: true }
-    })
+router.post('/surveyComplete', (req, res) => {
+    
+    // console.log(req.body.result[0].answertext);
+    User.update({
+        shift: req.body.result[0].answertext,
+        income: req.body.result[1].answertext,
+        tech: req.body.result[2].answertext,
+        health: req.body.result[3].answertext,
+        oralCare: req.body.result[4].answertext,
+        educationNeeded: req.body.result[5].answertext,
+        people: req.body.result[6].answertext,
+        subject: req.body.result[7].answertext,
+        build: req.body.result[8].answertext,
+        priority: req.body.result[9].answertext,
+        where: req.body.result[10].answertext,
+        environment: req.body.result[11].answertext,
+        hands: req.body.result[12].answertext
+    }, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+            console.log(result);
+        }
+    });
+    // console.log(req.body.result);
+
+    //update user to have survey results
+
+    // define categories in an array 
+    // loop over categories to find matches
+    //set matches to an object
+    //post object to database
+
+    //     let result = req.body.result;
+    // for (let i = 0; i < result.length; i++) {
+    //     let res = result[i].answertext;
+    //     if (res === '6 AM - 2 PM' || res === '9 AM - 5 PM') {
+    //         result[i].shift = 'daytime';
+    //     }
+    //     console.log(req.body.result);
+    // }
+
+
+    // User.update({
+    //     questionShift: survey.shift,
+    //     questionIncome: q2,
+    //     questionTech: q3,
+    //     questionHealth: q4,
+    //     questionEducation: q5,
+    //     questionPeople: q6,
+    //     questionSubject: q7,
+    //     questionBuild: q8,
+    //     questionPriority: q9,
+    //     questionWhere: q10,
+    //     questionEnvironment: q11,
+    //     questionHands: q12 
+    // }, () => {
+
+    // });
+
+
 });
+
+// router.get('/:id', (req, res) => {
+//     Job.find({
+//         questionShift: survey.shift,
+//         questionIncome: q2,
+//         questionTech: q3,
+//         questionHealth: q4,
+//         questionEducation: q5,
+//         questionPeople: q6,
+//         questionSubject: q7,
+//         questionBuild: q8,
+//         questionPriority: q9,
+//         questionWhere: q10,
+//         questionEnvironment: q11,
+//         questionHands: q12
+//     })
+// });
 
 
 
@@ -90,4 +155,4 @@ router.get('/:id', (req, res) => {
 //     }
 // })
 
-// module.exports = router
+module.exports = router
