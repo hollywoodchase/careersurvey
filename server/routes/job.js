@@ -94,7 +94,7 @@ router.post('/surveyComplete', (req, res) => {
         } else if (res === 'English/History') {
             result[i].subject = 'englishHistory';
         } else if (res === 'Not really') {
-            result[i].build = 'false';
+            result[i].build = false;
         } else if (res === "Yes, using a computer") {
             result[i].build = 'tech';
         } else if (res === "Yes, when I am given specific instructions") {
@@ -203,16 +203,14 @@ router.post('/surveyComplete', (req, res) => {
 });
 
 router.get('/jobs', (req, res) => {
-    console.log('tititi4');
-    console.log(finalResult[0].shift);
-    console.log(finalResult[1].income);
-    console.log(finalResult[2].tech);
+    // console.log('tititi4');
+    // console.log(finalResult);
     Job.find({
-        questionShift: finalResult[0].shift,
-        questionIncome: finalResult[1].income,
+        // questionShift: finalResult[0].shift,
+        // questionIncome: finalResult[1].income
         questionTech: finalResult[2].tech
         // questionHealth: finalResult[3].health,
-        // questionOralCare: finalResult[4].oralCare
+        // questionOralCare: finalResult[4].oralCare,
         // questionEducation: finalResult[5].education,
         // questionPeople: finalResult[6].people,
         // questionSubject: finalResult[7].subject,
