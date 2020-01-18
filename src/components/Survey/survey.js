@@ -50,7 +50,21 @@ class Survey extends Component {
     }
 
     submitAnswers = () => {
-        // Here is code for submit
+        // axios.post('/surveyComplete', this.state.selectedAnswers)
+        //     .then(response => {
+        //         console.log('hahaha');
+        //         console.log(response.data);   
+        //     });
+        const result = this.state.selectedAnswers
+        axios.post('/api/surveyComplete', {
+            result: result
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     componentDidMount() {
