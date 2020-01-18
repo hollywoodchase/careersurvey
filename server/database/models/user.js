@@ -9,17 +9,17 @@ const userSchema = new Schema({
 	password: { type: String, unique: false, required: false },
 	shift: { type: String },
 	income: { type: String },
-	tech: { type: Boolean },
+	tech: { type: String },
 	health: { type: String },
 	oralCare: { type: String },
 	education: { type: String },
-	people: { type: Boolean},
+	people: { type: String},
 	subject: { type: String },
 	build: { type: String },
 	priority: { type: String },
 	where: { type: String },
-	environment: { type: Boolean},
-	hands: { type: Boolean }
+	environment: { type: String},
+	hands: { type: String }
 })
 
 // Define schema methods
