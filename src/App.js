@@ -62,7 +62,7 @@ class App extends Component {
 
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
-          <p>Join the party, {this.state.username}!</p>
+          <p className="greeting">{this.state.username} is logged in</p>
         }
         {/* Routes to different components */}
 
