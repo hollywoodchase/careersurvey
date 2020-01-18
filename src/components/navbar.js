@@ -35,10 +35,10 @@ class Navbar extends Component {
             <div>
 
                 <header className="navbar App-header" id="nav-container">
-                    <div className="col-4" >
+                    <div className="col-8" >
                         {loggedIn ? (
                             <section className="navbar-section">
-                                <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
+                                <Link to="#" className="btn btn-link text-secondary logout-link" onClick={this.logout}>
                                     <span className="text-secondary">Logout</span></Link>
                                     <Link to="/" className="btn btn-link text-secondary">
                                         <span className="text-secondary">Home</span>
