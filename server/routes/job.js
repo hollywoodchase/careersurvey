@@ -73,10 +73,8 @@ router.post('/surveyComplete', (req, res) => {
             result[i].oralCare = 'true';
         } else if (res === 'No') {
             result[i].oralCare = 'false';
-        } else if (res === 'High School') {
-            result[i].educationNeeded = 'highSchool';
-        } else if (res === '2 years of college') {
-            result[i].educationNeeded = 'twoYears';
+        } else if (res === 'High School' || res === '2 years of college') {
+            result[i].educationNeeded = 'twoYearsOrFewer';
         } else if (res === '4 years of college') {
             result[i].educationNeeded = 'bachelors';
         } else if (res === 'More than 4 years of college') {
