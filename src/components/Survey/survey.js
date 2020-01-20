@@ -26,9 +26,9 @@ class Survey extends Component {
 
     checkAnswers = (id) => {
         const index = this.state.selectedAnswers.findIndex(i => i.questionId === id)
-        console.log(index)
+        // console.log(index)
         const array = this.state.selectedAnswers
-        console.log(array)
+        // console.log(array)
         if (index !== -1) {
             array.splice(index, 1)
             this.setState({ selectedAnswers: array })
@@ -50,17 +50,15 @@ class Survey extends Component {
     }
 
     submitAnswers = () => {
-        // axios.post('/surveyComplete', this.state.selectedAnswers)
-        //     .then(response => {
-        //         console.log('hahaha');
-        //         console.log(response.data);   
-        //     });
         const result = this.state.selectedAnswers
         axios.post('/api/surveyComplete', {
             result: result
         })
             .then(function (response) {
-                console.log(response);
+                window.location.replace("/surveyComplete");
+            })
+            .then(function (response) {
+                window.location.replace("/jobs");
             })
             .catch(function (error) {
                 console.log(error);
