@@ -53,12 +53,10 @@ router.post('/surveyComplete', (req, res) => {
             result[i].income = 'car';
         } else if (res === 'House') {
             result[i].income = 'house';
-        } else if (res === 'Boat') {
-            result[i].income = 'boat';
+        } else if (res === 'Boat' || res === 'Vacation Home') {
+            result[i].income = 'boatVacation';
         } else if (res === 'Car') {
             result[i].income = 'car';
-        } else if (res === 'Vacation Home') {
-            result[i].income = 'vacation';
         } else if (res === '0' || res === '1-2') {
             result[i].tech = false;
         } else if (res === '3-5' || res === '6-8') {
