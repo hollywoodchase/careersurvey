@@ -89,12 +89,8 @@ router.post('/surveyComplete', (req, res) => {
             result[i].subject = 'englishHistory';
         } else if (res === 'Not really') {
             result[i].build = 'false';
-        } else if (res === "Yes, using a computer") {
-            result[i].build = 'tech';
-        } else if (res === "Yes, when I am given specific instructions") {
-            result[i].build = 'construction';
-        } else if (res === "Yes, and I like to figure it out on my own") {
-            result[i].build = 'engineer';
+        } else if (res === "Yes, using a computer" || res === "Yes, when I am given specific instructions" || res === "Yes, and I like to figure it out on my own") {
+            result[i].build = 'true';
         } else if (res === 'Making the most money') {
             result[i].priority = 'money';
         } else if (res === "Going to school for the least amount of time" || res === "Helping other people") {
