@@ -99,10 +99,8 @@ router.post('/surveyComplete', (req, res) => {
             result[i].build = 'engineer';
         } else if (res === 'Making the most money') {
             result[i].priority = 'money';
-        } else if (res === "Going to school for the least amount of time") {
-            result[i].priority = 'leastSchool';
-        } else if (res === "Helping other people") {
-            result[i].priority = 'helping';
+        } else if (res === "Going to school for the least amount of time" || res === "Helping other people") {
+            result[i].priority = 'helpingLeastSchool';
         } else if (res === "Having a job that you like") {
             result[i].priority = 'jobLike';
         } else if (res === 'An office building') {
