@@ -192,34 +192,43 @@ router.post('/surveyComplete', (req, res) => {
 });
 
 router.get('/jobs', (req, res) => {
-
-    console.log(finalResult);
     if (finalResult[4].oralCare === 'true') {
+        // console.log('yippie');
         Job.find({
             questionOralCare: 'true'
         },
             (err, response) => {
                 res.send(response);
+                console.log('momomo6');
+                console.log(response);
+            })
+    } else if (finalResult[11].environment === 'true') {
+        console.log('ENVIRONMENT');
+        Job.find({
+            questionEnvironment: 'true'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo6');
+                console.log(response);
             })
     } else {
-        console.log("false");
+        console.log("FALSE");
         Job.find({
             questionShift: finalResult[0].shift,
             questionIncome: finalResult[1].income,
             questionTech: finalResult[2].tech,
             questionHealth: finalResult[3].health,
-            questionOralCare: finalResult[4].oralCare,
             questionEducation: finalResult[5].education,
             questionPeople: finalResult[6].people,
             questionSubject: finalResult[7].subject,
             questionBuild: finalResult[8].build,
             questionPriority: finalResult[9].priority,
             questionWhere: finalResult[10].where,
-            questionEnvironment: finalResult[11].environment,
             questionHands: finalResult[12].hands
         }, (err, response) => {
             res.send(response);
-            console.log('momomo6');
+            console.log('momomo7');
             console.log(response);
         })
     }
