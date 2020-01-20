@@ -61,11 +61,9 @@ router.post('/surveyComplete', (req, res) => {
             result[i].tech = false;
         } else if (res === '3-5' || res === '6-8') {
             result[i].tech = true;
-        } else if (res === 'Totally grossed out' || res === "Don’t mind blood but don’t want to work with sick people") {
+        } else if (res === 'Totally grossed out' || res === 'No problem with sick people but don’t want to work with blood') {
             result[i].health = 'false';
-        } else if (res === 'No problem with sick people but don’t want to work with blood') {
-            result[i].health = 'psych';
-        } else if (res === 'Would be willing to work with sick people and blood') {
+        } else if (res === "Don’t mind blood but don’t want to work with sick people" || res === 'Would be willing to work with sick people and blood') {
             result[i].health = 'true';
         } else if (res === 'Yes') {
             result[i].oralCare = 'true';
@@ -194,30 +192,37 @@ router.post('/surveyComplete', (req, res) => {
 });
 
 router.get('/jobs', (req, res) => {
-    
+
     console.log(finalResult);
     if (finalResult[4].oralCare === 'true') {
-        console.log("OC");
+        Job.find({
+            questionOralCare: 'true'
+        },
+            (err, response) => {
+                res.send(response);
+            })
+    } else {
+        console.log("false");
+        Job.find({
+            questionShift: finalResult[0].shift,
+            questionIncome: finalResult[1].income,
+            questionTech: finalResult[2].tech,
+            questionHealth: finalResult[3].health,
+            questionOralCare: finalResult[4].oralCare,
+            questionEducation: finalResult[5].education,
+            questionPeople: finalResult[6].people,
+            questionSubject: finalResult[7].subject,
+            questionBuild: finalResult[8].build,
+            questionPriority: finalResult[9].priority,
+            questionWhere: finalResult[10].where,
+            questionEnvironment: finalResult[11].environment,
+            questionHands: finalResult[12].hands
+        }, (err, response) => {
+            res.send(response);
+            console.log('momomo6');
+            console.log(response);
+        })
     }
-    Job.find({
-        questionShift: finalResult[0].shift,
-        questionIncome: finalResult[1].income,
-        questionTech: finalResult[2].tech,
-        questionHealth: finalResult[3].health,
-        questionOralCare: finalResult[4].oralCare,
-        questionEducation: finalResult[5].education,
-        questionPeople: finalResult[6].people,
-        questionSubject: finalResult[7].subject,
-        questionBuild: finalResult[8].build,
-        questionPriority: finalResult[9].priority,
-        questionWhere: finalResult[10].where,
-        questionEnvironment: finalResult[11].environment,
-        questionHands: finalResult[12].hands
-    }, (err, response) => {
-        res.send(response);
-        console.log('momomo6');
-        console.log(response);
-    })
 });
 
 module.exports = router
