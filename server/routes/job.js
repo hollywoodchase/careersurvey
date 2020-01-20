@@ -35,7 +35,7 @@ router.post('/surveyComplete', (req, res) => {
             console.log(err);
         } else {
             res.send(result);
-            console.log(result);
+            // console.log(result);
         }
     });
     // console.log('hihihihi7');
@@ -123,7 +123,6 @@ router.post('/surveyComplete', (req, res) => {
     }
 
 
-
     // router.get('/:id', (req, res) => {
     //     Job.find({
 
@@ -195,8 +194,11 @@ router.post('/surveyComplete', (req, res) => {
 });
 
 router.get('/jobs', (req, res) => {
-    // console.log('tititi4');
+    
     console.log(finalResult);
+    if (finalResult[4].oralCare === 'true') {
+        console.log("OC");
+    }
     Job.find({
         questionShift: finalResult[0].shift,
         questionIncome: finalResult[1].income,

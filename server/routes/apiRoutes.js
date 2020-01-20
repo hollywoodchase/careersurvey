@@ -6,7 +6,7 @@ const router = express.Router();
   // Return all jobs found in jobs.js as JSON
   
   router.get("/jobs", function(req, res) {
-    // console.log(jobs);
+    console.log("kikiki");
     res.json(jobs);
   });
 
