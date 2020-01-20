@@ -107,12 +107,10 @@ router.post('/surveyComplete', (req, res) => {
             result[i].priority = 'jobLike';
         } else if (res === 'An office building') {
             result[i].where = 'office';
-        } else if (res === "An outdoor workplace") {
-            result[i].where = 'outdoors';
+        } else if (res === "An outdoor workplace" || res === "A different place every shift") {
+            result[i].where = 'differentOutdoors';
         } else if (res === "A government or medical facility") {
             result[i].where = 'govMedStore';
-        } else if (res === "A different place every shift") {
-            result[i].where = 'different';
         } else if (res === "Who cares? The world is ending" || res === "Yes, but it’s too late, the damage is done") {
             result[i].environment = 'false';
         } else if (res === "Yes, I try to make a difference in small ways" || res === "Yes, the future of our planet is important and we need to make big changes now") {
