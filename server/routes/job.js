@@ -7,11 +7,7 @@ const passport = require('../passport')
 let finalResult = {};
 
 router.post('/surveyComplete', (req, res) => {
-
-    // console.log('lalala1');
-    // console.log(req.user._id);
-
-    // console.log(req.body.result[0].answertext);
+    //Updates the userDB with the answers they provided on the survey
     User.update({
         _id: req.user._id
     }, {
@@ -35,11 +31,8 @@ router.post('/surveyComplete', (req, res) => {
             console.log(err);
         } else {
             res.send(result);
-            // console.log(result);
         }
     });
-    // console.log('hihihihi7');
-    // console.log(req.user);
 
 
     let result = req.body.result;
@@ -103,9 +96,9 @@ router.post('/surveyComplete', (req, res) => {
             result[i].where = 'differentOutdoors';
         } else if (res === "A government or medical facility") {
             result[i].where = 'govMedStore';
-        } else if (res === "Who cares? The world is ending" || res === "Yes, but it’s too late, the damage is done") {
+        } else if (res === "Who cares? The world is ending" || res === "Yes, but it’s too late, the damage is done" || res === "Yes, I try to make a difference in small ways") {
             result[i].environment = 'false';
-        } else if (res === "Yes, I try to make a difference in small ways" || res === "Yes, the future of our planet is important and we need to make big changes now") {
+        } else if (res === "Yes, the future of our planet is important and we need to make big changes now") {
             result[i].environment = 'true';
         } else if (res === "Yes, I am very hands on" || res === "I will if I have to, but I'd rather not") {
             result[i].hands = 'true';
@@ -115,17 +108,6 @@ router.post('/surveyComplete', (req, res) => {
         // console.log(req.body.result);
         finalResult = req.body.result;
     }
-
-
-    // router.get('/:id', (req, res) => {
-    //     Job.find({
-
-    //     })
-    // });
-
-
-
-    // req.params.wantsTech or req.body
 
 
     //     User.findOne({ username: username }, (err, user) => {
@@ -189,7 +171,6 @@ router.post('/surveyComplete', (req, res) => {
 
 router.get('/jobs', (req, res) => {
     if (finalResult[4].oralCare === 'true') {
-        // console.log('yippie');
         Job.find({
             questionOralCare: 'true'
         },
@@ -225,7 +206,12 @@ router.get('/jobs', (req, res) => {
         }, (err, response) => {
             res.send(response);
             console.log('momomo7');
-            console.log(response);
+            console.log(response.length);
+            for (let i = 0; i < response.length; i++) {
+                console.log(response.title);
+            }
+            
+            // console.log(response);
         })
     }
 });
