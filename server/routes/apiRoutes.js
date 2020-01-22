@@ -5,10 +5,10 @@ const router = express.Router();
 
   // Return all jobs found in jobs.js as JSON
   
-  router.get("/jobs", function(req, res) {
-    console.log("kikiki");
-    res.json(jobs);
-  });
+  // router.get("/jobs", function(req, res) {
+  //   console.log("kikiki");
+  //   res.json(jobs);
+  // });
 
   // app.post("/jobs", function(req, res) {
   //   // console.log(req.body.scores);

@@ -46,11 +46,10 @@ class Survey extends Component {
             { "answertext": e.target.textContent, "questionId": e.target.getAttribute("questionid") }]
 
         })
-
     }
 
     submitAnswers = () => {
-        const result = this.state.selectedAnswers
+        const result = this.state.selectedAnswers;
         axios.post('/api/surveyComplete', {
             result: result
         })
@@ -59,6 +58,14 @@ class Survey extends Component {
             })
             .then(function (response) {
                 window.location.replace("/jobs");
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        axios.get('/api/jobs', {})
+            .then(function (response) {
+                console.log('yayayaya');
+                console.log(response.data);
             })
             .catch(function (error) {
                 console.log(error);
