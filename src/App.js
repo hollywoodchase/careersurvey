@@ -11,6 +11,9 @@ import Survey from './components/Survey/survey'
 import Results from './components/Survey/surveyResultsPage'
 import Jobs from './components/jobs';
 
+// images
+import backgroundImg from './img/city-scape1.jpg';
+
 class App extends Component {
   constructor() {
     super()

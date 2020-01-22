@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { withRouter } from "react-router-dom";
+import "./app-style.css";
 
 class Signup extends Component {
 	constructor() {
@@ -26,7 +27,7 @@ class Signup extends Component {
 		console.log('sign-up handleSubmit, username: ')
 		console.log(this.state.username)
 		event.preventDefault()
-		this.setState({error: false})
+		this.setState({ error: false })
 
 		//request to server to add a new username/password
 		axios.post('/user/', {
@@ -39,7 +40,7 @@ class Signup extends Component {
 					console.log('successful signup')
 					this.props.history.push("/login");
 				} else {
-					this.setState({error: true, errorMessage: response.data.error})
+					this.setState({ error: true, errorMessage: response.data.error })
 					console.log('username already taken')
 				}
 			}).catch(error => {
@@ -50,17 +51,14 @@ class Signup extends Component {
 	}
 
 
-render() {
-	
-	return (
-		<div className="SignupForm">
-			<h4>Sign up</h4>
-			<form className="form-horizontal">
-				<div className="form-group">
-					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="username">Username:</label>
-					</div>
-					<div className="col-3 col-mr-auto">
+	render() {
+
+		return (
+
+			<div class="login-page">
+				<div class="form">
+					<form class="register-form">
+					<label for="username">Username</label>
 						<input className="form-input"
 							type="text"
 							id="username"
@@ -69,15 +67,7 @@ render() {
 							value={this.state.username}
 							onChange={this.handleChange}
 						/>
-					</div>
-				</div>
-	
-
-				<div className="form-group">
-					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="password">Password:</label>
-					</div>
-					<div className="col-3 col-mr-auto">
+	<label for="password">Password</label>
 						<input className="form-input"
 							placeholder="password"
 							type="password"
@@ -85,25 +75,21 @@ render() {
 							value={this.state.password}
 							onChange={this.handleChange}
 						/>
-					</div>
-					<div className="error">{this.state.error ? this.state.errorMessage : ""}</div>
+
+						<button
+							onClick={this.handleSubmit}
+							type="submit" className="btn"
+						>Sign up</button>
+
+						<p className="error">{this.state.error ? this.state.errorMessage : ""}</p>
+						<p class="message">Already registered? <a href="/login">Log In</a></p>
+					</form>
 				</div>
+			</div>
 
-				
 
-				<div className="form-group ">
-					<div className="col-7"></div>
-					<button
-						className="btn btn-primary col-1 col-mr-auto"
-						onClick={this.handleSubmit}
-						type="submit"
-					>Sign up</button>
-				</div>
-			</form>
-		</div>
-
-	)
-}
+		)
+	}
 }
 
 export default withRouter(Signup);
