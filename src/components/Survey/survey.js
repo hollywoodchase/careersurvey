@@ -96,7 +96,7 @@ class Survey extends Component {
 
     render() {
         return (
-            <div className="container" >
+            <div className="survey-container" >
                 <div className="title">Career Survey</div>
 
                 {this.state.questionBank.length > 0 &&
@@ -111,7 +111,7 @@ class Survey extends Component {
                     )
                 }
                 < div className="questionBox" >
-                    <button className="btn btn-success btn-block" onClick={this.submitAnswers}>Submit</button>
+                    <button className="btn btn-submit btn-block" onClick={this.submitAnswers}>Submit</button>
                 </div >
 
             </div >
