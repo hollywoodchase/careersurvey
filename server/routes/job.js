@@ -109,88 +109,88 @@ router.post('/surveyComplete', (req, res) => {
         finalResult = req.body.result;
     }
 
-
-    //     User.findOne({ username: username }, (err, user) => {
-    //         if (err) {
-    //             console.log('User.js post error: ', err)
-    //         } else if (user) {
-    //             res.json({
-    //                 error: `Sorry, there's already a user with the username: ${username}`
-    //             })
-    //         }
-    //         else {
-    //             const newUser = new User({
-    //                 username: username,
-    //                 password: password
-    //             })
-    //             newUser.save((err, savedUser) => {
-    //                 if (err) return res.json(err)
-    //                 res.json(savedUser)
-    //             })
-    //         }
-    //     })
-    // })
-
-    // router.post(
-    //     '/login',
-    //     function (req, res, next) {
-    //         console.log('routes/user.js, login, req.body: ');
-    //         console.log(req.body)
-    //         next()
-    //     },
-    //     passport.authenticate('local'),
-    //     (req, res) => {
-    //         console.log('logged in', req.user);
-    //         var userInfo = {
-    //             username: req.user.username
-    //         };
-    //         res.send(userInfo);
-    //     }
-    // )
-
-    // router.get('/', (req, res, next) => {
-    //     console.log('===== user!!======')
-    //     console.log(req.user)
-    //     if (req.user) {
-    //         res.json({ user: req.user })
-    //     } else {
-    //         res.json({ user: null })
-    //     }
-    // })
-
-    // router.post('/logout', (req, res) => {
-    //     if (req.user) {
-    //         req.logout()
-    //         res.send({ msg: 'logging out' })
-    //     } else {
-    //         res.send({ msg: 'no user to log out' })
-    //     }
-    // })
-
 });
 
 router.get('/jobs', (req, res) => {
     if (finalResult[4].oralCare === 'true') {
+        console.log('ORALCARE');
         Job.find({
             questionOralCare: 'true'
         },
             (err, response) => {
                 res.send(response);
-                console.log('momomo6');
+                console.log('momomo4');
                 console.log(response);
             })
-    } else if (finalResult[11].environment === 'true') {
+    } 
+    else if (finalResult[11].environment === 'true') {
         console.log('ENVIRONMENT');
         Job.find({
             questionEnvironment: 'true'
         },
             (err, response) => {
                 res.send(response);
-                console.log('momomo6');
+                console.log('momomo11');
                 console.log(response);
             })
-    } else {
-        console.log("FALSE");
+
+    } 
+    else if (finalResult[9].priority === 'money') {
+        console.log('MONEY');
+        Job.find({
+            questionPriority: 'money'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo9');
+                console.log(response);
+            })
+    } 
+    else if (finalResult[9].priority === 'helpingLeastSchool') {
+        console.log('HELPING/LEASTSCHOOL');
+        Job.find({
+            questionPriority: 'helpingLeastSchool'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo9');
+                console.log(response);
+            })
+    } 
+    else if (finalResult[1].income === 'boatVacation') {
+        console.log('BOAT/VACATION');
+        Job.find({
+            questionIncome: 'boatVacation'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo1');
+                console.log(response);
+            })
+    } 
+    else if (finalResult[5].educationNeeded === 'advanced') {
+        console.log('ADVANCED');
+        Job.find({
+            questionEducationNeeded: 'advanced'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo5');
+                console.log(response);
+            })
+    } 
+    else if (finalResult[10].where === 'office') {
+        console.log('OFFICE');
+        Job.find({
+            questionWhere: 'office'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo10');
+                console.log(response);
+            })
+    }
+    else {
         Job.find({
             questionShift: finalResult[0].shift,
             questionIncome: finalResult[1].income,
@@ -205,15 +205,10 @@ router.get('/jobs', (req, res) => {
             questionHands: finalResult[12].hands
         }, (err, response) => {
             res.send(response);
-            console.log('momomo7');
-            console.log(response.length);
-            for (let i = 0; i < response.length; i++) {
-                console.log(response.title);
-            }
-            
-            // console.log(response);
         })
     }
 });
+
+
 
 module.exports = router
