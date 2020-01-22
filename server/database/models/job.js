@@ -13,6 +13,7 @@ const jobSchema = new Schema({
   questionShift: { type: String, required: true },
   questionIncome: { type: String, required: true },
   questionTech: { type: String, required: true },
+  questionOralCare: { type: String, required: true },
   questionHealth: { type: String, required: true },
   questionEducation: { type: String, required: true },
   questionPeople: { type: String, required: true },
