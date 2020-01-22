@@ -20,11 +20,10 @@ router.post('/surveyComplete', (req, res) => {
             educationNeeded: req.body.result[5].answertext,
             people: req.body.result[6].answertext,
             subject: req.body.result[7].answertext,
-            build: req.body.result[8].answertext,
-            priority: req.body.result[9].answertext,
-            where: req.body.result[10].answertext,
-            environment: req.body.result[11].answertext,
-            hands: req.body.result[12].answertext
+            priority: req.body.result[8].answertext,
+            where: req.body.result[9].answertext,
+            environment: req.body.result[10].answertext,
+            hands: req.body.result[11].answertext
         }
     }, (err, result) => {
         if (err) {
@@ -80,10 +79,6 @@ router.post('/surveyComplete', (req, res) => {
             result[i].subject = 'techShop';
         } else if (res === 'English/History') {
             result[i].subject = 'englishHistory';
-        } else if (res === 'Not really') {
-            result[i].build = 'false';
-        } else if (res === "Yes, using a computer" || res === "Yes, when I am given specific instructions" || res === "Yes, and I like to figure it out on my own") {
-            result[i].build = 'true';
         } else if (res === 'Making the most money') {
             result[i].priority = 'money';
         } else if (res === "Going to school for the least amount of time" || res === "Helping other people") {
@@ -123,7 +118,7 @@ router.get('/jobs', (req, res) => {
                 console.log(response);
             })
     } 
-    else if (finalResult[11].environment === 'true') {
+    else if (finalResult[10].environment === 'true') {
         console.log('ENVIRONMENT');
         Job.find({
             questionEnvironment: 'true'
@@ -135,7 +130,7 @@ router.get('/jobs', (req, res) => {
             })
 
     } 
-    else if (finalResult[9].priority === 'money') {
+    else if (finalResult[8].priority === 'money') {
         console.log('MONEY');
         Job.find({
             questionPriority: 'money'
@@ -146,7 +141,7 @@ router.get('/jobs', (req, res) => {
                 console.log(response);
             })
     } 
-    else if (finalResult[9].priority === 'helpingLeastSchool') {
+    else if (finalResult[8].priority === 'helpingLeastSchool') {
         console.log('HELPING/LEASTSCHOOL');
         Job.find({
             questionPriority: 'helpingLeastSchool'
@@ -179,7 +174,7 @@ router.get('/jobs', (req, res) => {
                 console.log(response);
             })
     } 
-    else if (finalResult[10].where === 'office') {
+    else if (finalResult[9].where === 'office') {
         console.log('OFFICE');
         Job.find({
             questionWhere: 'office'
@@ -199,10 +194,9 @@ router.get('/jobs', (req, res) => {
             questionEducation: finalResult[5].education,
             questionPeople: finalResult[6].people,
             questionSubject: finalResult[7].subject,
-            questionBuild: finalResult[8].build,
-            questionPriority: finalResult[9].priority,
-            questionWhere: finalResult[10].where,
-            questionHands: finalResult[12].hands
+            questionPriority: finalResult[8].priority,
+            questionWhere: finalResult[9].where,
+            questionHands: finalResult[11].hands
         }, (err, response) => {
             res.send(response);
         })
