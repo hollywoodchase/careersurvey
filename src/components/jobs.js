@@ -11,6 +11,7 @@ class Jobs extends Component {
                 for (let i = 0; i < res.data.length; i++) {
                     yes.push(res.data[i].title);
                 }
+                console.log('results');
                 console.log(yes);
                 // console.log(response.data[0].title);
             });
