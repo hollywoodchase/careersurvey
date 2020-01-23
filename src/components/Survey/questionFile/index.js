@@ -40,29 +40,24 @@ const qBank = [
     questionId: 8
 },
 {
-    question: "Do you like to build things?",
-    answers: ["Not really", "Yes, using a computer", "Yes, when I am given specific instructions", "Yes, and I like to figure it out on my own"],
-    questionId: 9
-},
-{
     question: "Which of these is the highest priority to you?",
     answers: ["Making the most money", "Going to school for the least amount of time", "Helping other people", "Having a job that you like"],
-    questionId: 10
+    questionId: 9
 },
 {
     question: "Where would you want to go to work every day?",
     answers: ["An office building", "An outdoor workplace", "A government or medical facility", "A different place every shift"],
-    questionId: 11
+    questionId: 10
 },
 {
     question: "Do you care about the future of our environment?",
     answers: ["Who cares? The world is ending", "Yes, but it’s too late, the damage is done", "Yes, I try to make a difference in small ways", "Yes, the future of our planet is important and we need to make big changes now"],
-    questionId: 12
+    questionId: 11
 },
 {
     question: "Do you enjoy hands-on work?",
     answers: ["Yes, I am very hands on", "I will if I have to, but I'd rather not", "No, I'd rather not work with my hands", "Absolutely not"],
-    questionId: 13
+    questionId: 12
 }
 ];
 
