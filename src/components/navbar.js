@@ -49,7 +49,7 @@ class Navbar extends Component {
                                     <Link to="/saved" className="btn btn-link">
                                         <span className="text-secondary">Saved Jobs</span>
                                     </Link>
-                                    <Link to="/results" className="btn btn-link">
+                                    <Link to="/jobs" className="btn btn-link">
                                         <span className="text-secondary">Survey Results</span>
                                     </Link>
 

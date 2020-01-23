@@ -185,7 +185,7 @@ router.get('/jobs', (req, res) => {
                 console.log(response.length);
             })
     }
-    else if (finalResult[9].subject === 'englishHistory') {
+    else if (finalResult[7].subject === 'englishHistory') {
         console.log('ENGLISH/HISTORY');
         Job.find({
             questionSubject: 'englishHistory'
