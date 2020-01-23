@@ -115,7 +115,7 @@ router.get('/jobs', (req, res) => {
             (err, response) => {
                 res.send(response);
                 console.log('momomo4');
-                console.log(response);
+                console.log(response.length);
             })
     } 
     else if (finalResult[10].environment === 'true') {
@@ -126,7 +126,7 @@ router.get('/jobs', (req, res) => {
             (err, response) => {
                 res.send(response);
                 console.log('momomo11');
-                console.log(response);
+                console.log(response.length);
             })
 
     } 
@@ -138,7 +138,7 @@ router.get('/jobs', (req, res) => {
             (err, response) => {
                 res.send(response);
                 console.log('momomo9');
-                console.log(response);
+                console.log(response.length);
             })
     } 
     else if (finalResult[8].priority === 'helpingLeastSchool') {
@@ -149,7 +149,7 @@ router.get('/jobs', (req, res) => {
             (err, response) => {
                 res.send(response);
                 console.log('momomo9');
-                console.log(response);
+                console.log(response.length);
             })
     } 
     else if (finalResult[1].income === 'boatVacation') {
@@ -160,7 +160,7 @@ router.get('/jobs', (req, res) => {
             (err, response) => {
                 res.send(response);
                 console.log('momomo1');
-                console.log(response);
+                console.log(response.length);
             })
     } 
     else if (finalResult[5].educationNeeded === 'advanced') {
@@ -171,7 +171,7 @@ router.get('/jobs', (req, res) => {
             (err, response) => {
                 res.send(response);
                 console.log('momomo5');
-                console.log(response);
+                console.log(response.length);
             })
     } 
     else if (finalResult[9].where === 'office') {
@@ -182,7 +182,18 @@ router.get('/jobs', (req, res) => {
             (err, response) => {
                 res.send(response);
                 console.log('momomo10');
-                console.log(response);
+                console.log(response.length);
+            })
+    }
+    else if (finalResult[9].subject === 'englishHistory') {
+        console.log('ENGLISH/HISTORY');
+        Job.find({
+            questionSubject: 'englishHistory'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo9');
+                console.log(response.length);
             })
     }
     else {
