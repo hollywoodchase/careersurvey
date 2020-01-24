@@ -4,11 +4,15 @@ import qBank from "./questionFile";
 import axios from "axios";
 
 class Survey extends Component {
-    state = {
-        questionBank: [],
-        selectedAnswers: [],
-        errors: ""
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            questionBank: [],
+            selectedAnswers: [],
+            errors: ""
+        };
+    }
+    
 
     getQuestions = () => {
         this.setState({
@@ -100,7 +104,7 @@ class Survey extends Component {
         }
     }
 
-    render() {
+    renderSurvey = () => {
         return (
             <div className="survey-container" >
                 <div className="title">Career Survey</div>
@@ -123,6 +127,23 @@ class Survey extends Component {
 
             </div >
         );
+    }
+
+
+
+    render() {
+        const loggedIn = this.props.isloggedIn;
+        console.log('survey render, props: ')
+        console.log(this.props);
+
+        let isloggedInContent = this.props.isloggedin ? this.renderSurvey() : <p>Not logged in</p>
+
+        return <div>
+           {isloggedInContent}
+        </div>
+        
+         
+
     }
 }
 

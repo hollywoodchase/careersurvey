@@ -13,7 +13,6 @@ class LoginForm extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
-
     }
 
     handleChange(event) {
@@ -61,7 +60,7 @@ class LoginForm extends Component {
                 <div class="login-page">
                     <div class="form">
                         <form class="login-form">
-                        <label for="username">Username</label>
+                            <label for="username">Username</label>
                             <input className="form-input"
                                 type="text"
                                 id="username"
@@ -70,7 +69,7 @@ class LoginForm extends Component {
                                 value={this.state.username}
                                 onChange={this.handleChange}
                             />
-    <label for="password">Password</label>
+                            <label for="password">Password</label>
                             <input className="form-input"
                                 placeholder="password"
                                 type="password"
