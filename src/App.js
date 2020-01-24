@@ -8,7 +8,6 @@ import LoginForm from './components/login-form'
 import Navbar from './components/navbar'
 import Home from './components/home'
 import Survey from './components/Survey/survey'
-import Results from './components/Survey/surveyResultsPage'
 import Jobs from './components/jobs';
 
 // images
@@ -90,7 +89,6 @@ class App extends Component {
         />
         <Route exact path="/jobs" component={Jobs} />
         <Route exact path="/survey" component={Survey} />
-        <Route exact path="/results" component={Results} />
 
       </div>
     );
