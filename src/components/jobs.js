@@ -18,7 +18,7 @@ class Jobs extends Component {
             .then(res => {
                 if (res.data.length < 1) {
                     document.getElementById('cardTitle').innerHTML = 'No Results';
-                    document.getElementById('surveyBtnDiv').innerHTML = 'Restart Survey';
+                    document.getElementById('startSurvey').innerHTML = 'Restart Survey';
                 }
                 else {
                     document.getElementById("startSurvey").style.visibility = "hidden"
@@ -46,15 +46,15 @@ class Jobs extends Component {
         return (
 
             <div className="card">
-                <div className="card-header">
+                <div className="">
                     <h3 id="cardTitle"></h3>
                 </div>
                 <div className="card-body">
                     {this.state.info.map((info, index) => (
-                        <div className="card-info">
+                        <div className="card-info" key={info.id}>
                             <h3 className="info card-title">{JSON.stringify(info.title)}</h3>
                             <p className="info card-description">Description:</p> <p className="info">{JSON.stringify(info.description)}</p>
-                            <p className="info card-salary">Median Salary: {JSON.stringify(info.salary)+ "/yr"}</p>
+                            <p className="info card-salary">Median Salary: {JSON.stringify(info.salary) + "/yr"}</p>
                             <p className="info card-hourly">Median Hourly Wage: {JSON.stringify(info.hourly + "/hr")}</p>
                             <p className="info card-rent">Affordable rent: {JSON.stringify(info.rent) + "/mo"}</p>
                             <p className="info card-jobsAvailable">Available Jobs: {JSON.stringify(info.jobsAvailable)}</p>
