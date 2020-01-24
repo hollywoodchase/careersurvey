@@ -16,7 +16,6 @@
     margin-bottom: 100px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
-  
   .title {
     text-align: center;
     position: relative;
@@ -24,16 +23,13 @@
     color: rgb(255, 255, 255);
     padding: 20px;
     font-size: 1.8em;
-    /* border-radius: 5px; */
   }
-  
   .question {
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
   .questionBox {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -42,11 +38,6 @@
     box-sizing: border-box;
     background-color: rgb(250, 250, 250);
   }
-  
-  /* .playBtn {
-  margin-top:10px;
-  } */
-  
   .btn-primary {
     background-color: gray;
     border: none;
@@ -66,4 +57,9 @@
     border: none;
     color: white;
   }
-  
+  .errorBox {
+    color: #bf0603;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }

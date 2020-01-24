@@ -6,14 +6,14 @@ import axios from "axios";
 class Survey extends Component {
     state = {
         questionBank: [],
-        selectedAnswers: []
+        selectedAnswers: [],
+        errors: ""
     };
 
     getQuestions = () => {
         this.setState({
             questionBank: qBank
         })
-
     };
 
     sortAnswers = () => {
@@ -26,9 +26,7 @@ class Survey extends Component {
 
     checkAnswers = (id) => {
         const index = this.state.selectedAnswers.findIndex(i => i.questionId === id)
-        // console.log(index)
         const array = this.state.selectedAnswers
-        // console.log(array)
         if (index !== -1) {
             array.splice(index, 1)
             this.setState({ selectedAnswers: array })
@@ -94,6 +92,14 @@ class Survey extends Component {
         })
     }
 
+    checkAllAnswers = () => {
+        if (this.state.selectedAnswers.length === 12 ) {
+            this.submitAnswers();
+        } else {
+            this.setState({errors: "Please answer every question"})
+        }
+    }
+
     render() {
         return (
             <div className="survey-container" >
@@ -110,8 +116,9 @@ class Survey extends Component {
 
                     )
                 }
+                <div className="errorBox">{this.state.errors}</div>
                 < div className="questionBox" >
-                    <button className="btn btn-submit btn-block" onClick={this.submitAnswers}>Submit</button>
+                    <button className="btn btn-submit btn-block" onClick={this.checkAllAnswers}>Submit</button>
                 </div >
 
             </div >
