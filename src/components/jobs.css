@@ -16,7 +16,9 @@
     margin-bottom: 100px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
-
+  .info{
+    font-weight: bold;
+}
   .card-title {
       margin-top: 10px;
   }
@@ -36,6 +38,4 @@
       margin-left: 30px;
       margin-bottom: 30px;
   }
-  .info{
-      font-weight: bold;
-  }
+
