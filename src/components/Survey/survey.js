@@ -40,7 +40,6 @@ class Survey extends Component {
     setSelectedAnswers = (e) => {
         e.preventDefault();
         const key = e.target.getAttribute("questionid")
-        const index = this.state.selectedAnswers.findIndex(i => i.questionId === key)
         this.checkAnswers(key)
 
         this.setState({
@@ -129,21 +128,29 @@ class Survey extends Component {
         );
     }
 
+    notLoggedInWindow = () => {
+        return (
+            <div className="home-page">
+            <div className="home-box">
+                
+                    <h2>Whoops!</h2>
+
+                    <p>You need to log in to see this page ☹️</p> 
+
+                    <h5><a href="/login">Log In</a></h5> or
+                    <h5><a href="/signup">Sign Up</a></h5>
+            </div>
+        </div>
+        )
+    }
 
 
     render() {
-        const loggedIn = this.props.isloggedIn;
-        console.log('survey render, props: ')
-        console.log(this.props);
-
-        let isloggedInContent = this.props.isloggedin ? this.renderSurvey() : <p>Not logged in</p>
 
         return <div>
-           {isloggedInContent}
+           {this.props.isloggedin ? this.renderSurvey() : this.notLoggedInWindow()}
         </div>
         
-         
-
     }
 }
 

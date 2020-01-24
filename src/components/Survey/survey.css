@@ -63,3 +63,9 @@
     text-align: center;
     margin-top: 10px;
   }
+  h5 a {
+    color: #bf0603;
+  }
+  h5 a:hover {
+    color: #bf0603;
+  }
