@@ -17,6 +17,10 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
 
+  .card-title {
+      margin-top: 10px;
+  }
+
   .infobtn {
       margin-right: 5px;
       margin-bottom: 20px;
@@ -25,4 +29,10 @@
 
   .deleteButton {
       font-weight: bolder;
+  }
+
+  #startSurvey {
+      margin-top: -10px;
+      margin-left: 30px;
+      margin-bottom: 30px;
   }
