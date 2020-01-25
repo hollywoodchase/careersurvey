@@ -2,13 +2,11 @@ import React, { Component } from 'react'
 import "./app-style.css";
 
 class Home extends Component {
-    constructor() {
-        super()
-    }
+
     render() {
         return (
-            <div class="home-page">
-            <div class="home-box">
+            <div className="home-page">
+            <div className="home-box">
                 
                     <h2>Hey there!</h2>
 
