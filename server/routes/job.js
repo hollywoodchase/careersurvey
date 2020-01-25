@@ -117,7 +117,7 @@ router.get('/jobs', (req, res) => {
                 console.log('momomo4');
                 console.log(response.length);
             })
-    } 
+    }
     else if (finalResult[10].environment === 'true') {
         console.log('ENVIRONMENT');
         Job.find({
@@ -129,7 +129,7 @@ router.get('/jobs', (req, res) => {
                 console.log(response.length);
             })
 
-    } 
+    }
     else if (finalResult[8].priority === 'money') {
         console.log('MONEY');
         Job.find({
@@ -140,7 +140,7 @@ router.get('/jobs', (req, res) => {
                 console.log('momomo9');
                 console.log(response.length);
             })
-    } 
+    }
     else if (finalResult[8].priority === 'helpingLeastSchool') {
         console.log('HELPING/LEASTSCHOOL');
         Job.find({
@@ -151,7 +151,7 @@ router.get('/jobs', (req, res) => {
                 console.log('momomo9');
                 console.log(response.length);
             })
-    } 
+    }
     else if (finalResult[1].income === 'boatVacation') {
         console.log('BOAT/VACATION');
         Job.find({
@@ -162,7 +162,7 @@ router.get('/jobs', (req, res) => {
                 console.log('momomo1');
                 console.log(response.length);
             })
-    } 
+    }
     else if (finalResult[5].educationNeeded === 'advanced') {
         console.log('ADVANCED');
         Job.find({
@@ -173,7 +173,7 @@ router.get('/jobs', (req, res) => {
                 console.log('momomo5');
                 console.log(response.length);
             })
-    } 
+    }
     else if (finalResult[9].where === 'office') {
         console.log('OFFICE');
         Job.find({
@@ -214,6 +214,28 @@ router.get('/jobs', (req, res) => {
     }
 });
 
+router.post('/saved', (req, res) => {
+    console.log('PRINT REQ BODY');
+    console.log(req.body.result);
+    // let ids = [];
+    // for (let i = 0; i < req.body.result.length; i++) {
+    //     ids.push(req.body.result.id);
+    // }
+    // console.log(ids);
+    // User.update({
+    //     _id: req.user._id
+    // }, {
+    //     $set: {
+    //         notes: 
+    //     }
+    // }, (err, result) => {
+    //     if (err) {
+    //         console.log(err);
+    //     } else {
+    //         res.send(result);
+    //     }
+    // });
+});
 
 
 module.exports = router

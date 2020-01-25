@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Redirect } from 'react-router-dom'
 
 // components
 import Signup from './components/sign-up'
@@ -8,7 +8,6 @@ import LoginForm from './components/login-form'
 import Navbar from './components/navbar'
 import Home from './components/home'
 import Survey from './components/Survey/survey'
-import Results from './components/Survey/surveyResultsPage'
 import Jobs from './components/jobs';
 
 // images
@@ -88,9 +87,8 @@ class App extends Component {
           render={() =>
             <Signup />}
         />
-        <Route exact path="/jobs" component={Jobs} />
-        <Route exact path="/survey" component={Survey} />
-        <Route exact path="/results" component={Results} />
+        <Route exact path="/jobs" component={() => <Jobs isloggedin={this.state.loggedIn} /> } />
+          <Route exact path="/survey" component={() => <Survey isloggedin={this.state.loggedIn}  /> } />
 
       </div>
     );

@@ -4,16 +4,20 @@ import qBank from "./questionFile";
 import axios from "axios";
 
 class Survey extends Component {
-    state = {
-        questionBank: [],
-        selectedAnswers: []
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            questionBank: [],
+            selectedAnswers: [],
+            errors: ""
+        };
+    }
+    
 
     getQuestions = () => {
         this.setState({
             questionBank: qBank
         })
-
     };
 
     sortAnswers = () => {
@@ -26,9 +30,7 @@ class Survey extends Component {
 
     checkAnswers = (id) => {
         const index = this.state.selectedAnswers.findIndex(i => i.questionId === id)
-        // console.log(index)
         const array = this.state.selectedAnswers
-        // console.log(array)
         if (index !== -1) {
             array.splice(index, 1)
             this.setState({ selectedAnswers: array })
@@ -38,7 +40,6 @@ class Survey extends Component {
     setSelectedAnswers = (e) => {
         e.preventDefault();
         const key = e.target.getAttribute("questionid")
-        const index = this.state.selectedAnswers.findIndex(i => i.questionId === key)
         this.checkAnswers(key)
 
         this.setState({
@@ -94,7 +95,15 @@ class Survey extends Component {
         })
     }
 
-    render() {
+    checkAllAnswers = () => {
+        if (this.state.selectedAnswers.length === 12 ) {
+            this.submitAnswers();
+        } else {
+            this.setState({errors: "Please answer every question"})
+        }
+    }
+
+    renderSurvey = () => {
         return (
             <div className="survey-container" >
                 <div className="title">Career Survey</div>
@@ -110,12 +119,38 @@ class Survey extends Component {
 
                     )
                 }
+                <div className="errorBox">{this.state.errors}</div>
                 < div className="questionBox" >
-                    <button className="btn btn-submit btn-block" onClick={this.submitAnswers}>Submit</button>
+                    <button className="btn btn-submit btn-block" onClick={this.checkAllAnswers}>Submit</button>
                 </div >
 
             </div >
         );
+    }
+
+    notLoggedInWindow = () => {
+        return (
+            <div className="home-page">
+            <div className="home-box">
+                
+                    <h2>Whoops!</h2>
+
+                    <p>You need to log in to see this page ☹️</p> 
+
+                    <h5><a href="/login">Log In</a></h5> or
+                    <h5><a href="/signup">Sign Up</a></h5>
+            </div>
+        </div>
+        )
+    }
+
+
+    render() {
+
+        return <div>
+           {this.props.isloggedin ? this.renderSurvey() : this.notLoggedInWindow()}
+        </div>
+        
     }
 }
 
