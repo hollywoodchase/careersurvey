@@ -3,6 +3,8 @@ import { Redirect } from 'react-router-dom'
 import { Route, Link } from 'react-router-dom'
 import '../App.css';
 import axios from 'axios'
+import Logo from "../img/KDC-logo.png"
+
 
 class Navbar extends Component {
     constructor() {
@@ -68,8 +70,8 @@ class Navbar extends Component {
                                 </section>
                             )}
                     </div>
-                    <div className="col-4 col-mr-auto">
-                        <h1 className="App-title">Career Survey</h1>
+                    <div className="col-4 d-flex justify-content-center">
+                    <img className="logo"src={Logo} alt="logo" />
                     </div>
                 </header>
             </div>
