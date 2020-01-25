@@ -5,17 +5,17 @@
   padding: 8% 0 0;
   margin: auto;
 }
-.form {
+form {
+  padding: 10px;
   position: relative;
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
-  padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-.form input {
+form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -26,10 +26,15 @@
   box-sizing: border-box;
   font-size: 14px;
 }
+.form-body {
+  padding: 10px 45px 35px 45px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
 
 /*    BUTTONS!    */
 
-.form button {
+form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -44,7 +49,7 @@
   cursor: pointer;
   box-shadow: 2px 2px 2px grey;
 }
-.form button:hover,.form button:active,.form button:focus {
+form button:hover,.form button:active,.form button:focus {
   background-color: #a30603;
   box-shadow: 0px 0px 0px grey;
   color: white;
@@ -74,16 +79,16 @@
 
 /*   LOGIN / SIGN UP PAGES   */
 
-.form .message {
+form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
-.form .message a {
+form .message a {
   color: #a30603;
   text-decoration: none;
 }
-.form .error {
+form .error {
     margin: 15px 0 0;
     font-size: 12px;
     color: #EF3B3A;
@@ -160,6 +165,18 @@ html {
 .error {
   color: red;
 }
+.header {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  font-size: 1.8em;
+  height: 78px;
+}
 
 
 
@@ -175,10 +192,41 @@ html {
   z-index: 1;
   background: white;
   margin: 0 auto 100px;
-  padding: 45px;
+  padding: 10px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+.home-text {
+  padding: 15px 45px 45px 45px;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 h2 {
   margin-bottom: 20px;
+}
+.home-header {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  font-size: 1.8em;
+  height: auto;
+}
+
+.home-header img {
+  width: 65%;
+}
+
+.whoops-box {
+  position: relative;
+  z-index: 1;
+  background: white;
+  margin: 0 auto 100px;
+  padding: 45px 0;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }

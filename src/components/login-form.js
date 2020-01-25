@@ -57,9 +57,10 @@ class LoginForm extends Component {
         } else {
             return (
 
-                <div class="login-page">
-                    <div class="form">
-                        <form class="login-form">
+                <div className="login-page">
+                    <form>
+                        <h3 className="header">Login</h3>
+                        <div className="form-body">
                             <label for="username">Username</label>
                             <input className="form-input"
                                 type="text"
@@ -82,8 +83,8 @@ class LoginForm extends Component {
 
                             <p className="error">{this.state.error ? this.state.errorMessage : ""}</p>
                             <p class="message">Not registered? <a href="/signup">Create an account</a></p>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             )
         }
