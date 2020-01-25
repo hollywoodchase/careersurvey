@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./survey.css";
 import qBank from "./questionFile";
 import axios from "axios";
+import NotLoggedIn from "../notLoggedIn"
 
 class Survey extends Component {
     constructor(props) {
@@ -128,27 +129,10 @@ class Survey extends Component {
         );
     }
 
-    notLoggedInWindow = () => {
-        return (
-            <div className="home-page">
-            <div className="home-box">
-                
-                    <h2>Whoops!</h2>
-
-                    <p>You need to log in to see this page ☹️</p> 
-
-                    <h5><a href="/login">Log In</a></h5> or
-                    <h5><a href="/signup">Sign Up</a></h5>
-            </div>
-        </div>
-        )
-    }
-
-
     render() {
 
         return <div>
-           {this.props.isloggedin ? this.renderSurvey() : this.notLoggedInWindow()}
+           {this.props.isloggedin ? this.renderSurvey() : <NotLoggedIn />}
         </div>
         
     }

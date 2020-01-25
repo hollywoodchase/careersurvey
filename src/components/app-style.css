@@ -220,3 +220,13 @@ h2 {
 .home-header img {
   width: 65%;
 }
+
+.whoops-box {
+  position: relative;
+  z-index: 1;
+  background: white;
+  margin: 0 auto 100px;
+  padding: 45px 0;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}

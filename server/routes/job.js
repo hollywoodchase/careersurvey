@@ -196,6 +196,18 @@ router.get('/jobs', (req, res) => {
                 console.log(response.length);
             })
     }
+    else if (finalResult[7].subject === 'techShop' && finalResult[11].hands === 'true') {
+        console.log('TECH/SHOP and HANDS');
+        Job.find({
+            questionHands: 'true', 
+            questionSubject: 'techShop'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo711');
+                console.log(response.length);
+            })
+    }
     else {
         Job.find({
             questionShift: finalResult[0].shift,
@@ -235,5 +247,63 @@ router.post('/saved', (req, res) => {
     });
 });
 
+
+router.get('/saved', (req, res) => {
+    // console.log("HELLOOO")
+    // console.log(User.notes)
+
+    let notes = []
+
+    User.find({
+        _id: req.user._id
+    }, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+            // console.log("HELLOOO")
+            // console.log(result[0].notes);
+            notes = result[0].notes;
+            console.log("notes")
+            console.log(notes)
+
+            // for (var i = 0; i < notes.length; i++) {
+
+            //     Job.find({
+            //         _id: notes[i]
+            //     }, (err, result) => {
+            //         if (err) {
+            //             console.log(err);
+            //         } else {
+            //             res.send(result);
+            //             console.log(i)
+            //             console.log(result);
+
+            //         }
+            //     })
+
+            // }
+
+
+        }
+    })
+
+})
+
+
+// router.get('/saved', (req, res) => {
+//     console.log("HELLOOO")
+//     console.log(User.notes)
+
+//    Job.find({
+//        _id: "5e2a517fa7dc7aa98250f7a2"
+//    }, (err, result) => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         res.send(result);
+//         console.log(result);
+//    }})
+// })
 
 module.exports = router

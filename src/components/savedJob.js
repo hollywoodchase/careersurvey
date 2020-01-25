@@ -14,15 +14,15 @@ class Jobs extends Component {
     }
 
     getJobs = () => {
-        axios.get('/api/jobs')
+        axios.get('/api/saved')
             .then(res => {
                 if (res.data.length < 1) {
-                    document.getElementById('cardTitle').innerHTML = 'No Results';
-                    document.getElementById('startSurvey').innerHTML = 'Restart Survey';
+                    document.getElementById('cardTitle').innerHTML = 'No Saved Jobs';
+                    document.getElementById('startSurvey').innerHTML = 'See Job Results';
                 }
                 else {
                     document.getElementById("startSurvey").style.visibility = "hidden"
-                    document.getElementById('cardTitle').innerHTML = 'Suggested Jobs'
+                    document.getElementById('cardTitle').innerHTML = 'Saved Jobs'
                     for (let i = 0; i < res.data.length; i++) {
                         console.log("FOOL " + JSON.stringify(res.data[0]))
                         jobInfo.push({
@@ -80,7 +80,7 @@ class Jobs extends Component {
                                 <p><strong>Available Jobs:</strong> {(info.jobsAvailable)}</p>
                                 {/* Buttons */}
                                 <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
-                                <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></a>
+                                {/* <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></a> */}
                                 <a href="#" className="infobtn deleteButton btn btn-danger"><h6>Delete</h6></a>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ class Jobs extends Component {
                 </div>
 
             ))}
-            <div id="surveyBtnDiv"><a href="/survey" id="startSurvey" className="btn btn-secondary"><h4>Start Survey</h4></a></div>
+            <div id="surveyBtnDiv"><a href="/results" id="startSurvey" className="btn btn-secondary"><h4>See Results</h4></a></div>
         </div>
 
         )
