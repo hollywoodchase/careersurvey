@@ -196,6 +196,18 @@ router.get('/jobs', (req, res) => {
                 console.log(response.length);
             })
     }
+    else if (finalResult[7].subject === 'techShop' && finalResult[11].hands === 'true') {
+        console.log('TECH/SHOP and HANDS');
+        Job.find({
+            questionHands: 'true', 
+            questionSubject: 'techShop'
+        },
+            (err, response) => {
+                res.send(response);
+                console.log('momomo711');
+                console.log(response.length);
+            })
+    }
     else {
         Job.find({
             questionShift: finalResult[0].shift,
