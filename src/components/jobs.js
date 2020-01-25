@@ -42,6 +42,20 @@ class Jobs extends Component {
             });
     }
 
+    saveJobs = (info) => {
+        const result = this.state.info;
+        console.log('PRINTING THIS');
+        console.log(info.id);
+        axios.post('/api/saved', {
+            result: result
+        }).then(function (response) {
+            window.location.replace("/saved");
+            console.log('SAVEJOBS FUNCTION');
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
+
     render() {
         return (
 
@@ -61,7 +75,7 @@ class Jobs extends Component {
                             <img src={JSON.stringify(info.image)} />
                             {/* Buttons */}
                             <a href={JSON.stringify(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
-                            <a href="#" className="infobtn saveButton btn btn-secondary"><h6>Save</h6></a>
+                            <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => {this.saveJobs(info)}}><h6>Save</h6></a>
                             <a href="#" className="infobtn deleteButton btn btn-danger"><h6>Delete</h6></a>
                         </div>
                     ))}

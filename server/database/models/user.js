@@ -19,7 +19,8 @@ const userSchema = new Schema({
 	priority: { type: String },
 	where: { type: String },
 	environment: { type: String},
-	hands: { type: String }
+	hands: { type: String },
+	notes: { type: Object }
 })
 
 // Define schema methods
