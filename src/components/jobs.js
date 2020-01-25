@@ -34,7 +34,7 @@ class Jobs extends Component {
                             link: res.data[i].link,
                             hourly: res.data[i].hourlyWage,
                             rent: res.data[i].rent,
-                            image: res.data[i].url
+                            image: res.data[i].image
                         })
                     }
                     this.setState({ info: jobInfo })
@@ -43,14 +43,15 @@ class Jobs extends Component {
     }
 
     saveJobs = (info) => {
-        const result = this.state.info;
         console.log('PRINTING THIS');
-        console.log(info.id);
+        let id = info.id;
+        console.log(id);
+
         axios.post('/api/saved', {
-            result: result
+            notes: id
         }).then(function (response) {
-            window.location.replace("/saved");
             console.log('SAVEJOBS FUNCTION');
+            console.log(response);
         }).catch(function (error) {
             console.log(error);
         });
@@ -59,29 +60,37 @@ class Jobs extends Component {
     render() {
         return (
 
-            <div className="card">
-                <div className="">
-                    <h3 id="cardTitle"></h3>
-                </div>
-                <div className="card-body">
-                    {this.state.info.map((info, index) => (
-                        <div className="card-info" key={info.id}>
-                            <h3 className="info card-title">{JSON.stringify(info.title)}</h3>
-                            <p className="info card-description">Description:</p> <p className="info">{JSON.stringify(info.description)}</p>
-                            <p className="info card-salary">Median Salary: {JSON.stringify(info.salary) + "/yr"}</p>
-                            <p className="info card-hourly">Median Hourly Wage: {JSON.stringify(info.hourly + "/hr")}</p>
-                            <p className="info card-rent">Affordable rent: {JSON.stringify(info.rent) + "/mo"}</p>
-                            <p className="info card-jobsAvailable">Available Jobs: {JSON.stringify(info.jobsAvailable)}</p>
-                            <img src={JSON.stringify(info.image)} />
-                            {/* Buttons */}
-                            <a href={JSON.stringify(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
-                            <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => {this.saveJobs(info)}}><h6>Save</h6></a>
-                            <a href="#" className="infobtn deleteButton btn btn-danger"><h6>Delete</h6></a>
+            <div className="container">
+            <h3 id="cardTitle"></h3>
+
+            {this.state.info.map((info, index) => (
+         
+                <div className="card mb-3" key={info.id}>
+                    <div className="row no-gutters">
+                        <div className="col-md-4">
+                        <img className="img-responsive" src={info.image} alt="job-image"/>
                         </div>
-                    ))}
+                        <div className="col-md-8">
+                            <div className="card-info" >
+                                <h3>{(info.title)}</h3>
+                                <p><strong>Description:</strong> {(info.description)}</p>
+                                <p><strong>Median Salary:</strong> {(info.salary) + "/yr"}</p>
+                                <p><strong>Median Hourly Wage:</strong> {(info.hourly + "/hr")}</p>
+                                <p><strong>Affordable Rent:</strong> {(info.rent) + "/mo"}</p>
+                                <p><strong>Available Jobs:</strong> {(info.jobsAvailable)}</p>
+                                {/* Buttons */}
+                                <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
+                                <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></a>
+                                <a href="#" className="infobtn deleteButton btn btn-danger"><h6>Delete</h6></a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div id="surveyBtnDiv"><a href="/survey" id="startSurvey" className="btn btn-secondary"><h4>Start Survey</h4></a></div>
-            </div>
+
+            ))}
+            <div id="surveyBtnDiv"><a href="/survey" id="startSurvey" className="btn btn-secondary"><h4>Start Survey</h4></a></div>
+        </div>
 
         )
     }
@@ -89,25 +98,3 @@ class Jobs extends Component {
 }
 
 export default Jobs;
-
-// return (
-//     <div>
-//         <div className="jobs-container" >
-//             {this.state.info.map((info, index) => (
-//                 <p key={info.id}>
-
-//                     Title: {JSON.stringify(info.title)}
-//                     <br></br>
-//                     Description: {JSON.stringify(info.description)}
-//                     <br></br>
-//                     Median Salary: {JSON.stringify(info.salary)}
-//                     <br></br>
-//                     Jobs Available: {JSON.stringify(info.jobsAvailable)}
-//                     <br></br>
-//                     Website: {JSON.stringify(info.link)}
-
-//                 </p>
-//             ))}
-//         </div>
-//     </div>
-// )
