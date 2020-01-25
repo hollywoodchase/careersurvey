@@ -22,7 +22,7 @@ const jobSchema = new Schema({
   questionPriority: { type: String, required: true },
   questionWhere: { type: String, required: true },
   questionEnvironment: { type: String, required: true },
-  questionHands: { type: String, required: true }
+  questionHands: { type: String, required: true },
 });
 
 const Job = mongoose.model("Job", jobSchema);
