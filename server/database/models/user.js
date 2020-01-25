@@ -23,7 +23,7 @@ const userSchema = new Schema({
 	notes: [
 		{
 		  // Store ObjectIds in the array
-		  type: String,
+		  type: Schema.Types.ObjectId,
 		  // The ObjectIds will refer to the ids in the Note model
 		  ref: "Note"
 		}
