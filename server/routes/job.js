@@ -216,25 +216,23 @@ router.get('/jobs', (req, res) => {
 
 router.post('/saved', (req, res) => {
     console.log('PRINT REQ BODY');
-    console.log(req.body.result);
-    // let ids = [];
-    // for (let i = 0; i < req.body.result.length; i++) {
-    //     ids.push(req.body.result.id);
-    // }
+    console.log(req.body);
+    console.log(req.user);
     // console.log(ids);
-    // User.update({
-    //     _id: req.user._id
-    // }, {
-    //     $set: {
-    //         notes: 
-    //     }
-    // }, (err, result) => {
-    //     if (err) {
-    //         console.log(err);
-    //     } else {
-    //         res.send(result);
-    //     }
-    // });
+    User.update({
+        _id: req.user._id
+    }, {
+        $push: {
+            notes: req.body.notes
+        }
+    }, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+            console.log(result);
+        }
+    });
 });
 
 

@@ -20,7 +20,14 @@ const userSchema = new Schema({
 	where: { type: String },
 	environment: { type: String},
 	hands: { type: String },
-	notes: { type: Object }
+	notes: [
+		{
+		  // Store ObjectIds in the array
+		  type: String,
+		  // The ObjectIds will refer to the ids in the Note model
+		  ref: "Note"
+		}
+	  ]
 })
 
 // Define schema methods
