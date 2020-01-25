@@ -8,7 +8,8 @@ import LoginForm from './components/login-form'
 import Navbar from './components/navbar'
 import Home from './components/home'
 import Survey from './components/Survey/survey'
-import Jobs from './components/jobs';
+import Jobs from './components/jobs'
+import Saved from './components/savedJob'
 
 // images
 import backgroundImg from './img/city-scape1.jpg';
@@ -89,6 +90,7 @@ class App extends Component {
         />
         <Route exact path="/jobs" component={() => <Jobs isloggedin={this.state.loggedIn} /> } />
           <Route exact path="/survey" component={() => <Survey isloggedin={this.state.loggedIn}  /> } />
+          <Route exact path="/saved" component={() => <Saved isloggedin={this.state.loggedIn}  /> } />
 
       </div>
     );
