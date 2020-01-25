@@ -192,10 +192,31 @@ html {
   z-index: 1;
   background: white;
   margin: 0 auto 100px;
-  padding: 45px;
+  padding: 10px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+.home-text {
+  padding: 15px 45px 45px 45px;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 h2 {
   margin-bottom: 20px;
+}
+.home-header {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  font-size: 1.8em;
+  height: auto;
+}
+
+.home-header img {
+  width: 65%;
 }
