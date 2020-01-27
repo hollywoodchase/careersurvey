@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const jobSchema = new Schema({
   rank: { type: String, required: true },
   description: { type: String, required: true },
+  educationNeeded: { type: String, required: true },
   image: { type: String, required: true },
   projectedJobs: { type: String, required: true },
   medianSalary: { type: String, required: true },
