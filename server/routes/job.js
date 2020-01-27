@@ -3,9 +3,7 @@ const router = express.Router()
 const Job = require('../database/models/job')
 const User = require('../database/models/user')
 const passport = require('../passport')
-
 let finalResult = {};
-
 router.post('/surveyComplete', (req, res) => {
     //Updates the userDB with the answers they provided on the survey
     User.update({
@@ -32,8 +30,6 @@ router.post('/surveyComplete', (req, res) => {
             res.send(result);
         }
     });
-
-
     let result = req.body.result;
     for (let i = 0; i < result.length; i++) {
         let res = result[i].answertext;
@@ -103,9 +99,7 @@ router.post('/surveyComplete', (req, res) => {
         // console.log(req.body.result);
         finalResult = req.body.result;
     }
-
 });
-
 router.get('/jobs', (req, res) => {
     if (finalResult[4].oralCare === 'true') {
         console.log('ORALCARE');
@@ -128,7 +122,6 @@ router.get('/jobs', (req, res) => {
                 console.log('momomo11');
                 console.log(response.length);
             })
-
     }
     else if (finalResult[8].priority === 'money') {
         console.log('MONEY');
@@ -247,40 +240,55 @@ router.post('/saved', (req, res) => {
     });
 });
 
-let notes = [];
+//DELETE ROUTE //
+
+router.delete('/delete', (req, res) => {
+    console.log('THIS WILL BE DELETED');
+    console.log(req.body);
+    console.log(req.user);
+    console.log(ids);
+    User.update({
+        _id: req.user._id
+    }, {
+        $push: {
+            jobs: req.body.notes
+        }
+    }, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+            console.log(result);
+        }
+    });
+});
+
+//DELETE NOTE //
 
 router.get('/saved', (req, res) => {
-    // console.log("HELLOOO")
-    // console.log(User.notes)
-
     User.find({
         _id: req.user._id
     })
-    .populate('jobs')
-    .then(function (result) {
-        res.send(result);
-        console.log(result);
-    }).catch(function(err) {
-        console.log(err);
-    });
+        .populate('jobs')
+        .then(function (result) {
+            res.send(result[0].jobs);
+            console.log(result[0].jobs);
 
+        }).catch(function (err) {
+            console.log(err);
+        });
 })
-
-
-router.get('/saved', (req, res) => {
-
-    console.log("HELLOOO")
-    console.log(notes);
-
-    //    Job.find({
-    //        _id: 
-    //    }, (err, result) => {
-    //     if (err) {
-    //         console.log(err);
-    //     } else {
-    //         res.send(result);
-    //         console.log(result);
-    //    }})
-})
-
+// router.get('/saved', (req, res) => {
+//     console.log("HELLOOO")
+//     console.log(notes);
+//        Job.find({
+//            _id:
+//        }, (err, result) => {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             res.send(result);
+//             console.log(result);
+//        }})
+// })
 module.exports = router
