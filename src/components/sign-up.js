@@ -55,10 +55,11 @@ class Signup extends Component {
 
 		return (
 
-			<div class="login-page">
-				<div class="form">
-					<form class="register-form">
-					<label for="username">Username</label>
+			<div className="login-page">
+				<form>
+					<h3 className="header">Sign Up</h3>
+					<div className="form-body">
+						<label for="username">Username</label>
 						<input className="form-input"
 							type="text"
 							id="username"
@@ -67,7 +68,7 @@ class Signup extends Component {
 							value={this.state.username}
 							onChange={this.handleChange}
 						/>
-	<label for="password">Password</label>
+						<label for="password">Password</label>
 						<input className="form-input"
 							placeholder="password"
 							type="password"
@@ -75,18 +76,13 @@ class Signup extends Component {
 							value={this.state.password}
 							onChange={this.handleChange}
 						/>
-
-						<button
-							onClick={this.handleSubmit}
-							type="submit" className="btn"
-						>Sign up</button>
+						<button onClick={this.handleSubmit} type="submit">Sign up</button>
 
 						<p className="error">{this.state.error ? this.state.errorMessage : ""}</p>
 						<p class="message">Already registered? <a href="/login">Log In</a></p>
-					</form>
-				</div>
+					</div>
+				</form>
 			</div>
-
 
 		)
 	}
