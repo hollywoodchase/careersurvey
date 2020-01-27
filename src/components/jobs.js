@@ -34,6 +34,7 @@ class Jobs extends Component {
                             id: res.data[i]._id,
                             title: res.data[i].title,
                             description: res.data[i].description,
+                            educationNeeded: res.data[i].educationNeeded,
                             salary: res.data[i].medianSalary,
                             jobsAvailable: res.data[i].projectedJobs,
                             link: res.data[i].link,
@@ -66,7 +67,7 @@ class Jobs extends Component {
                 <h3 id="cardTitle"></h3>
                 {this.state.info.map((info, index) => (
                     <div className="card mb-3"> 
-                    // key={info.id}>
+                    {/* // key={info.id}> */}
                         <div className="row">
                             <div className="col-md-3">
                                 <img className="img-fluid job-img" src={info.image} alt="job-image" />
@@ -75,6 +76,7 @@ class Jobs extends Component {
                                 <div id="cardInfo" className="card-info" >
                                     <h3>{(info.title)}</h3>
                                     <p><strong>Description:</strong> {(info.description)}</p>
+                                    <p><strong>Education Needed:</strong> {(info.educationNeeded)}</p>
                                     <p><strong>Median Salary:</strong> {(info.salary) + "/yr"}</p>
                                     <p><strong>Median Hourly Wage:</strong> {(info.hourly + "/hr")}</p>
                                     <p><strong>Rent You Could Afford:</strong> {(info.rent) + "/mo"}</p>
