@@ -42,15 +42,15 @@ class Jobs extends Component {
             });
     }
 
-    saveJobs = (info) => {
-        console.log('PRINTING THIS');
+    deleteJobs = (info) => {
         let id = info.id;
+        console.log('DELETING THIS');
         console.log(id);
 
-        axios.post('/api/saved', {
+        axios.delete('/api/delete', {
             notes: id
         }).then(function (response) {
-            console.log('SAVEJOBS FUNCTION');
+            console.log('DELETE FUNCTION');
             console.log(response);
         }).catch(function (error) {
             console.log(error);
@@ -65,13 +65,14 @@ class Jobs extends Component {
 
             {this.state.info.map((info, index) => (
          
-                <div className="card mb-3" key={info.id}>
+                <div className="card mb-3">
+                {/* key={info.id}> */}
                     <div className="row no-gutters">
                         <div className="col-md-4">
-                        <img className="img-responsive" src={info.image} alt="job-image"/>
+                        <img className="img-responsive job-img" src={info.image} alt="job-image"/>
                         </div>
                         <div className="col-md-8">
-                            <div className="card-info" >
+                            <div id="cardInfo" className="card-info" >
                                 <h3>{(info.title)}</h3>
                                 <p><strong>Description:</strong> {(info.description)}</p>
                                 <p><strong>Median Salary:</strong> {(info.salary) + "/yr"}</p>
@@ -81,7 +82,7 @@ class Jobs extends Component {
                                 {/* Buttons */}
                                 <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
                                 {/* <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></a> */}
-                                <a href="#" className="infobtn deleteButton btn btn-danger"><h6>Delete</h6></a>
+                                <a href="#" className="infobtn deleteButton btn btn-danger" onClick={() => { this.deleteJobs(info) }}><h6>Delete</h6></a>
                             </div>
                         </div>
 
