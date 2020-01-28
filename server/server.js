@@ -30,7 +30,7 @@ app.use(
 app.use(bodyParser.json())
 
 if (process.env.NODE_ENV === "production") {
-	app.use(express.static(__dirname, "..", "build"));
+	app.use(express.static(path.join(__dirname, "..", "build")));
 }
 
 // Sessions
