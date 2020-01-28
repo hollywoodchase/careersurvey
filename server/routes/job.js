@@ -4,6 +4,7 @@ const Job = require('../database/models/job')
 const User = require('../database/models/user')
 const passport = require('../passport')
 let finalResult = {};
+
 router.post('/surveyComplete', (req, res) => {
     //Updates the userDB with the answers they provided on the survey
     User.update({

@@ -23,8 +23,10 @@
     "react-scripts": "1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run start:prod",
+    "start:prod": "node server/server.js",
     "build": "react-scripts build",
+    "heroku-postbuild": "npm run build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "api": "nodemon ./server/server.js",

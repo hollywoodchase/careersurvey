@@ -23,7 +23,11 @@ class Navbar extends Component {
                     username: null
                 })
             }
-        }).catch(error => {
+        })
+        // .then(function(response) {
+        //     window.location.replace("/login");
+        // })
+        .catch(error => {
             console.log('Logout error')
         })
     }

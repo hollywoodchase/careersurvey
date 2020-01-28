@@ -10,6 +10,15 @@ const PORT = 8080 || process.env.PORT
 // Route requires
 const user = require('./routes/user')
 const surveyComplete = require('./routes/job');
+const mongoose = require("mongoose");
+const path = require('path');
+
+// Connect to Mongo DB
+mongoose.connect(
+	process.env.MONGODB_URI ||
+	"mongodb://careersurvey:careersurvey1@ds247377.mlab.com:47377/heroku_rrr8brd0"
+  );
+
 
 // MIDDLEWARE
 app.use(morgan('dev'))
@@ -19,6 +28,10 @@ app.use(
 	})
 )
 app.use(bodyParser.json())
+
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static(__dirname, "../build"));
+}
 
 // Sessions
 app.use(
@@ -38,6 +51,10 @@ app.use(passport.session()) // calls the deserializeUser
 // Routes
 app.use('/user', user)
 app.use('/api', surveyComplete)
+
+app.get('/*', (req, res) => {
+	res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
 
 // Starting Server 
 app.listen(PORT, () => {
