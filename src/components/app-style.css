@@ -152,6 +152,7 @@ html {
   background-size: cover;
   background-color: #000000;
 }
+
 .App-header {
   background-color: black;
   height: auto;
@@ -229,4 +230,8 @@ h2 {
   padding: 45px 0;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.welcome {
+    margin-top: 20px;
 }

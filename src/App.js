@@ -10,6 +10,7 @@ import Home from './components/home'
 import Survey from './components/Survey/survey'
 import Jobs from './components/jobs'
 import Saved from './components/savedJob'
+import WecomePage from './components/welcome'
 
 // images
 import backgroundImg from './img/city-scape1.jpg';
@@ -64,8 +65,8 @@ class App extends Component {
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
 
         {/* greet user if logged in: */}
-        {this.state.loggedIn 
-        // &&  <p className="greeting">{this.state.username} is logged in</p>
+        {this.state.loggedIn
+          // &&  <p className="greeting">{this.state.username} is logged in</p>
         }
         {/* Routes to different components */}
 
@@ -88,9 +89,12 @@ class App extends Component {
           render={() =>
             <Signup />}
         />
-        <Route exact path="/jobs" component={() => <Jobs isloggedin={this.state.loggedIn} /> } />
-          <Route exact path="/survey" component={() => <Survey isloggedin={this.state.loggedIn}  /> } />
-          <Route exact path="/saved" component={() => <Saved isloggedin={this.state.loggedIn}  /> } />
+        
+        <Route exact path="/jobs" component={() => <Jobs isloggedin={this.state.loggedIn} />} />
+        <Route exact path="/survey" component={() => <Survey isloggedin={this.state.loggedIn} />} />
+        <Route exact path="/saved" component={() => <Saved isloggedin={this.state.loggedIn} />} />
+        <Route exact path="/welcome" component={() => <WecomePage isloggedin={this.state.loggedIn} />} />
+
 
       </div>
     );
