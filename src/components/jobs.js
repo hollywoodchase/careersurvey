@@ -22,8 +22,7 @@ class Jobs extends Component {
         axios.get('/api/jobs')
             .then(res => {
                 if (res.data.length < 1) {
-                    document.getElementById('cardTitle').innerHTML = 'No Results';
-                    document.getElementById('startSurvey').innerHTML = 'Restart Survey';
+                    document.getElementById("startSurvey").style.visibility = "visible"
                 }
                 else {
                     document.getElementById("startSurvey").style.visibility = "hidden"
@@ -91,7 +90,9 @@ class Jobs extends Component {
                     </div>
 
                 ))}
-                <div id="surveyBtnDiv"><a href="/survey" id="startSurvey" className="btn btn-secondary"><h4>Start Survey</h4></a></div>
+                <div id="surveyBtnDiv">
+                    <a href="/survey" id="startSurvey" className="btn button">Start Survey</a>
+                    </div>
             </div>
         )
     }
