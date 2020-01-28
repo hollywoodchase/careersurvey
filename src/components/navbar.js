@@ -4,14 +4,11 @@ import { Route, Link } from 'react-router-dom'
 import '../App.css';
 import axios from 'axios'
 import Logo from "../img/KDC-logo.png"
-
-
 class Navbar extends Component {
     constructor() {
         super()
         this.logout = this.logout.bind(this)
     }
-
     logout(event) {
         event.preventDefault()
         console.log('logging out')
@@ -26,16 +23,14 @@ class Navbar extends Component {
         }).catch(error => {
             console.log('Logout error')
         })
+        window.location.href = "/login";
     }
-
     render() {
         const loggedIn = this.props.loggedIn;
         console.log('navbar render, props: ')
         console.log(this.props);
-
         return (
             <div>
-
                 <header className="navbar App-header" id="nav-container">
                     <div className="col-8" >
                         {loggedIn ? (
@@ -54,7 +49,6 @@ class Navbar extends Component {
                                     <Link to="/jobs" className="btn btn-link">
                                         <span className="text-secondary">Survey Results</span>
                                     </Link>
-
                             </section>
                         ) : (
                                 <section className="navbar-section">
@@ -75,10 +69,7 @@ class Navbar extends Component {
                     </div>
                 </header>
             </div>
-
         );
-
     }
 }
-
 export default Navbar

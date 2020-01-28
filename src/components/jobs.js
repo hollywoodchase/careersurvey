@@ -84,7 +84,6 @@ class Jobs extends Component {
                                     {/* Buttons */}
                                     <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
                                     <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></a>
-                                    {/* <a href="#" className="infobtn deleteButton btn btn-danger"><h6>Delete</h6></a> */}
                                 </div>
                             </div>
 
