@@ -3,8 +3,6 @@ import NotLoggedIn from "./notLoggedIn";
 import axios from 'axios';
 import "./jobs.css";
 
-let jobInfo = [];
-
 class Savedjobs extends Component {
     constructor(props) {
         super(props);
@@ -15,6 +13,7 @@ class Savedjobs extends Component {
 
     componentDidMount() {
         if (this.props.isloggedin) {
+
             this.getJobs();
         } 
     };
@@ -22,12 +21,14 @@ class Savedjobs extends Component {
     getJobs = () => {
         axios.get('/api/saved')
             .then(res => {
+                console.log(res.data);
                 if (res.data.length < 1) {
                     document.getElementById('cardTitle').innerHTML = 'No Saved Jobs';
                 }
                 else {
-                    document.getElementById("startSurvey").style.visibility = "hidden"
-                    document.getElementById('cardTitle').innerHTML = 'Saved Jobs'
+                    const jobInfo = [];
+                    document.getElementById("startSurvey").style.visibility = "hidden";
+                    document.getElementById('cardTitle').innerHTML = 'Saved Jobs';
                     for (let i = 0; i < res.data.length; i++) {
                         jobInfo.push({
                             id: res.data[i]._id,
@@ -41,7 +42,9 @@ class Savedjobs extends Component {
                             image: res.data[i].image
                         })
                     }
-                    this.setState({ info: jobInfo })
+                    console.log(jobInfo);
+
+                        this.setState({ info: jobInfo })
                 }
             });
     }
@@ -60,11 +63,12 @@ class Savedjobs extends Component {
     }
 
     renderSavedJobs  = () => { 
+        console.log(this.state.info);
         return (
             <div className="container">
             <h3 id="cardTitle"></h3>
             {this.state.info.map((info, index) => (
-                <div className="card mb-3">
+                <div className="card mb-3" id="card-home">
                 {/* key={info.id}> */}
                     <div className="row no-gutters">
                         <div className="col-md-4">

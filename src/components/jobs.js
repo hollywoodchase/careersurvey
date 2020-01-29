@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NotLoggedIn from "./notLoggedIn";
 import axios from 'axios';
 import "./jobs.css";
-let jobInfo = [];
 
 class Jobs extends Component {
     constructor(props) {
@@ -21,13 +20,15 @@ class Jobs extends Component {
     getJobs = () => {
         axios.get('/api/jobs')
             .then(res => {
+                this.setState({ info: [] });
                 if (res.data.length < 1) {
                     //document.getElementById("startSurvey").style.visibility = "visible"
                     document.getElementById("cardTitle").innerHTML = 'No Job Results';
                 }
                 else {
-                    document.getElementById("startSurvey").style.visibility = "hidden"
-                    document.getElementById('cardTitle').innerHTML = 'Suggested Jobs'
+                    const jobInfo = [];
+                    document.getElementById("startSurvey").style.visibility = "hidden";
+                    document.getElementById('cardTitle').innerHTML = 'Suggested Jobs';
                     for (let i = 0; i < res.data.length; i++) {
                         console.log("FOOL " + JSON.stringify(res.data[0]))
                         jobInfo.push({
