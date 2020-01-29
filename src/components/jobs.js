@@ -9,6 +9,7 @@ class Jobs extends Component {
         super(props);
         this.state = {
             info: [],
+    
         }
     };
 
@@ -40,22 +41,27 @@ class Jobs extends Component {
                             link: res.data[i].link,
                             hourly: res.data[i].hourlyWage,
                             rent: res.data[i].rent,
-                            image: res.data[i].image
+                            image: res.data[i].image,
+                            selected: false
                         })
                     }
                     this.setState({ info: jobInfo })
                 }
             });
     }
-    saveJobs = (info) => {
+    saveJobs = (savedJob) => {
         console.log('PRINTING THIS');
-        let id = info.id;
+        let id = savedJob.id;
         console.log(id);
         axios.post('/api/saved', {
             notes: id
-        }).then(function (response) {
+        }).then((response) => {
             console.log('SAVEJOBS FUNCTION');
             console.log(response);
+            const index = this.state.info.findIndex(job => job.id === savedJob.id);
+            const newArray = [... this.state.info]
+            newArray[index].selected = true
+            this.setState({info: newArray} )
         }).catch(function (error) {
             console.log(error);
         });
@@ -84,7 +90,8 @@ class Jobs extends Component {
                                     {/* Buttons */}
                                     <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
 
-                                    <button className="infobtn saveButton btn btn-secondary" type="button" onClick={() => { this.saveJobs(info) }}>Save</button>
+                                    <button className={`infobtn btn ${info.selected ? "btn-warning" : "btn-secondary"} `} type="button" onClick={() => { this.saveJobs(info) }}>Save</button>
+
                                 </div>
                             </div>
 
