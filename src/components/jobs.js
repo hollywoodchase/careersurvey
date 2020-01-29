@@ -90,8 +90,7 @@ class Jobs extends Component {
                                     {/* Buttons */}
                                     <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
 
-                                    <button className={`infobtn btn ${info.selected ? "btn-warning" : "btn-secondary"} `} type="button" onClick={() => { this.saveJobs(info) }}>Save</button>
-
+                                      <button className={`infobtn btn ${info.selected ? "btn-warning" : "btn-secondary"} `} type="button" onClick={() => { this.saveJobs(info) }}>Save</button>
                                 </div>
                             </div>
 
