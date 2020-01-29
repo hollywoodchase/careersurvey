@@ -242,30 +242,29 @@ router.post('/saved', (req, res) => {
     });
 });
 
-//DELETE ROUTE //
+//DELETE ROUTE
 
-router.delete('/delete', (req, res) => {
-    console.log('THIS WILL BE DELETED');
-    console.log(req.body);
-    console.log(req.user);
-    console.log(ids);
-    User.update({
+router.delete('/delete/:id', (req, res) => {
+    let jobDelete = req.params.id
+    console.log("THIS WILL BE DELETED " + jobDelete);
+
+    User.findOneAndUpdate({
         _id: req.user._id
     }, {
-        $push: {
-            jobs: req.body.notes
-        }
-    }, (err, result) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.send(result);
-            console.log(result);
-        }
-    });
+        $pull: { jobs: jobDelete }
+
+    }, { new: true, useFindAndModify: false,
+    }
+    ).then(function (result) {
+        console.log(result)
+        res.json(result);
+        
+    }).catch(err => {
+        console.log(err);
+    })
 });
 
-//DELETE NOTE //
+
 
 router.get('/saved', (req, res) => {
     User.find({
