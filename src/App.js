@@ -11,9 +11,11 @@ import Survey from './components/Survey/survey'
 import Jobs from './components/jobs'
 import Saved from './components/savedJob'
 import WecomePage from './components/welcome'
+import NotLoggedIn from './components/notLoggedIn'
 
 // images
 import backgroundImg from './img/city-scape1.jpg';
+import Savedjobs from './components/savedJob';
 
 class App extends Component {
   constructor() {
@@ -94,6 +96,7 @@ class App extends Component {
         <Route exact path="/survey" component={() => <Survey isloggedin={this.state.loggedIn} />} />
         <Route exact path="/saved" component={() => <Saved isloggedin={this.state.loggedIn} />} />
         <Route exact path="/welcome" component={() => <WecomePage isloggedin={this.state.loggedIn} />} />
+        <Route exact path="/loggedout" component={() => <NotLoggedIn />} />
 
 
       </div>
