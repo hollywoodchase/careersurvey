@@ -24,7 +24,6 @@ class Savedjobs extends Component {
             .then(res => {
                 if (res.data.length < 1) {
                     document.getElementById('cardTitle').innerHTML = 'No Saved Jobs';
-                    document.getElementById('startSurvey').innerHTML = 'See Job Results';
                 }
                 else {
                     document.getElementById("startSurvey").style.visibility = "hidden"
@@ -87,7 +86,7 @@ class Savedjobs extends Component {
                     </div>
                 </div>
             ))}
-            <div id="surveyBtnDiv"><a href="/results" id="startSurvey" className="btn btn-secondary"><h4>See Results</h4></a></div>
+            <div id="surveyBtnDiv"><a href="/results" id="startSurvey" className="btn button">See Job Results</a></div>
         </div>
         )
     }

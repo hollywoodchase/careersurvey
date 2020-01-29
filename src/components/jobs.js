@@ -15,14 +15,15 @@ class Jobs extends Component {
     componentDidMount() {
         if (this.props.isloggedin) {
             this.getJobs();
-        } 
+        }
     };
 
     getJobs = () => {
         axios.get('/api/jobs')
             .then(res => {
                 if (res.data.length < 1) {
-                    document.getElementById("startSurvey").style.visibility = "visible"
+                    //document.getElementById("startSurvey").style.visibility = "visible"
+                    document.getElementById("cardTitle").innerHTML = 'No Job Results';
                 }
                 else {
                     document.getElementById("startSurvey").style.visibility = "hidden"
@@ -63,10 +64,10 @@ class Jobs extends Component {
     renderJobResults = () => {
         return (
             <div className="container">
-                <h3 id="cardTitle"></h3>
+                <h3 id="cardTitle">No Job Results</h3>
                 {this.state.info.map((info, index) => (
-                    <div className="card mb-3"> 
-                    {/* // key={info.id}> */}
+                    <div className="card mb-3">
+                        {/* // key={info.id}> */}
                         <div className="row">
                             <div className="col-md-3">
                                 <img className="img-fluid job-img" src={info.image} alt="job-image" />
@@ -82,7 +83,8 @@ class Jobs extends Component {
                                     <p><strong>Available Jobs:</strong> {(info.jobsAvailable)}</p>
                                     {/* Buttons */}
                                     <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
-                                    <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></a>
+
+                                    <button className="infobtn saveButton btn btn-secondary" type="button" onClick={() => { this.saveJobs(info) }}>Save</button>
                                 </div>
                             </div>
 
@@ -92,7 +94,7 @@ class Jobs extends Component {
                 ))}
                 <div id="surveyBtnDiv">
                     <a href="/survey" id="startSurvey" className="btn button">Start Survey</a>
-                    </div>
+                </div>
             </div>
         )
     }
@@ -100,8 +102,8 @@ class Jobs extends Component {
 
     render() {
         return <div>
-        {this.props.isloggedin ? this.renderJobResults() : <NotLoggedIn />}
-    </div>
+            {this.props.isloggedin ? this.renderJobResults() : <NotLoggedIn />}
+        </div>
     }
 }
 export default Jobs;
