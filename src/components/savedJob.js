@@ -5,7 +5,6 @@ import "./jobs.css";
 import { withRouter } from 'react-router-dom'
 
 
-
 class Savedjobs extends Component {
     constructor(props) {
         super(props);
@@ -23,12 +22,12 @@ class Savedjobs extends Component {
         }
         this.getJobs();
         // }
-
     };
 
     getJobs = () => {
         axios.get('/api/saved')
             .then(res => {
+                console.log(res.data);
                 if (res.data.length < 1) {
                     document.getElementById('cardTitle').innerHTML = 'No Saved Jobs';
                 }
@@ -36,6 +35,7 @@ class Savedjobs extends Component {
                     document.getElementById("startSurvey").style.visibility = "hidden"
                     document.getElementById('cardTitle').innerHTML = 'Saved Jobs'
                     const jobInfo = [];
+
                     for (let i = 0; i < res.data.length; i++) {
                         jobInfo.push({
                             id: res.data[i]._id,
@@ -49,7 +49,9 @@ class Savedjobs extends Component {
                             image: res.data[i].image
                         })
                     }
-                    this.setState({ info: jobInfo })
+                    console.log(jobInfo);
+
+                        this.setState({ info: jobInfo })
                 }
             });
     }
@@ -67,8 +69,7 @@ class Savedjobs extends Component {
             })
     }
 
-
-    renderSavedJobs = () => {
+   renderSavedJobs = () => {
         return (
             <div className="container">
                 <h3 id="cardTitle"></h3>
@@ -91,6 +92,7 @@ class Savedjobs extends Component {
                                     <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
                                     <button className="infobtn deleteButton btn btn-danger" onClick={() => { this.deleteJobs(info) }}><h6>Delete</h6></button>
                                 </div>
+
                             </div>
                         </div>
                     </div>

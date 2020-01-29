@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import NotLoggedIn from "./notLoggedIn";
 import axios from 'axios';
 import "./jobs.css";
-let jobInfo = [];
 
 class Jobs extends Component {
     constructor(props) {
         super(props);
         this.state = {
             info: [],
+    
         }
     };
 
@@ -21,13 +21,15 @@ class Jobs extends Component {
     getJobs = () => {
         axios.get('/api/jobs')
             .then(res => {
+                this.setState({ info: [] });
                 if (res.data.length < 1) {
                     //document.getElementById("startSurvey").style.visibility = "visible"
                     document.getElementById("cardTitle").innerHTML = 'No Job Results';
                 }
                 else {
-                    document.getElementById("startSurvey").style.visibility = "hidden"
-                    document.getElementById('cardTitle').innerHTML = 'Suggested Jobs'
+                    const jobInfo = [];
+                    document.getElementById("startSurvey").style.visibility = "hidden";
+                    document.getElementById('cardTitle').innerHTML = 'Suggested Jobs';
                     for (let i = 0; i < res.data.length; i++) {
                         console.log("FOOL " + JSON.stringify(res.data[0]))
                         jobInfo.push({
@@ -40,22 +42,27 @@ class Jobs extends Component {
                             link: res.data[i].link,
                             hourly: res.data[i].hourlyWage,
                             rent: res.data[i].rent,
-                            image: res.data[i].image
+                            image: res.data[i].image,
+                            selected: false
                         })
                     }
                     this.setState({ info: jobInfo })
                 }
             });
     }
-    saveJobs = (info) => {
+    saveJobs = (savedJob) => {
         console.log('PRINTING THIS');
-        let id = info.id;
+        let id = savedJob.id;
         console.log(id);
         axios.post('/api/saved', {
             notes: id
-        }).then(function (response) {
+        }).then((response) => {
             console.log('SAVEJOBS FUNCTION');
             console.log(response);
+            const index = this.state.info.findIndex(job => job.id === savedJob.id);
+            const newArray = [... this.state.info]
+            newArray[index].selected = true
+            this.setState({info: newArray} )
         }).catch(function (error) {
             console.log(error);
         });
@@ -83,7 +90,8 @@ class Jobs extends Component {
                                     <p><strong>Available Jobs:</strong> {(info.jobsAvailable)}</p>
                                     {/* Buttons */}
                                     <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
-                                    <button type="button" class="infobtn saveButton btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></button>
+
+                                      <button className={`infobtn btn ${info.selected ? "btn-warning" : "btn-secondary"} `} type="button" onClick={() => { this.saveJobs(info) }}>Save</button>
                                 </div>
                             </div>
 

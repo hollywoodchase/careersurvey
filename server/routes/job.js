@@ -127,7 +127,8 @@ router.get('/jobs', (req, res) => {
     else if (finalResult[8].priority === 'money') {
         console.log('MONEY');
         Job.find({
-            questionPriority: 'money'
+            questionPriority: 'money',
+            questionOralCare: 'false',
         },
             (err, response) => {
                 res.send(response);
@@ -138,7 +139,8 @@ router.get('/jobs', (req, res) => {
     else if (finalResult[8].priority === 'helpingLeastSchool') {
         console.log('HELPING/LEASTSCHOOL');
         Job.find({
-            questionPriority: 'helpingLeastSchool'
+            questionPriority: 'helpingLeastSchool',
+            questionOralCare: 'false',
         },
             (err, response) => {
                 res.send(response);
@@ -149,7 +151,8 @@ router.get('/jobs', (req, res) => {
     else if (finalResult[1].income === 'boatVacation') {
         console.log('BOAT/VACATION');
         Job.find({
-            questionIncome: 'boatVacation'
+            questionIncome: 'boatVacation',
+            questionOralCare: 'false',
         },
             (err, response) => {
                 res.send(response);
@@ -160,7 +163,8 @@ router.get('/jobs', (req, res) => {
     else if (finalResult[5].educationNeeded === 'advanced') {
         console.log('ADVANCED');
         Job.find({
-            questionEducationNeeded: 'advanced'
+            questionEducationNeeded: 'advanced',
+            questionOralCare: 'false',
         },
             (err, response) => {
                 res.send(response);
@@ -171,7 +175,8 @@ router.get('/jobs', (req, res) => {
     else if (finalResult[9].where === 'office') {
         console.log('OFFICE');
         Job.find({
-            questionWhere: 'office'
+            questionWhere: 'office',
+            questionOralCare: 'false',
         },
             (err, response) => {
                 res.send(response);
@@ -182,7 +187,8 @@ router.get('/jobs', (req, res) => {
     else if (finalResult[7].subject === 'englishHistory') {
         console.log('ENGLISH/HISTORY');
         Job.find({
-            questionSubject: 'englishHistory'
+            questionSubject: 'englishHistory',
+            questionOralCare: 'false',
         },
             (err, response) => {
                 res.send(response);
@@ -194,7 +200,8 @@ router.get('/jobs', (req, res) => {
         console.log('TECH/SHOP and HANDS');
         Job.find({
             questionHands: 'true',
-            questionSubject: 'techShop'
+            questionSubject: 'techShop',
+            questionOralCare: 'false',
         },
             (err, response) => {
                 res.send(response);
@@ -208,6 +215,7 @@ router.get('/jobs', (req, res) => {
             questionIncome: finalResult[1].income,
             questionTech: finalResult[2].tech,
             questionHealth: finalResult[3].health,
+            questionOralCare: 'false',
             questionEducation: finalResult[5].education,
             questionPeople: finalResult[6].people,
             questionSubject: finalResult[7].subject,
@@ -223,8 +231,6 @@ router.get('/jobs', (req, res) => {
 
 router.post('/saved', (req, res) => {
     console.log('PRINT REQ BODY');
-    console.log(req.body);
-    console.log(req.user);
 
     User.update({
         _id: req.user._id
@@ -279,17 +285,4 @@ router.get('/saved', (req, res) => {
             console.log(err);
         });
 })
-// router.get('/saved', (req, res) => {
-//     console.log("HELLOOO")
-//     console.log(notes);
-//        Job.find({
-//            _id:
-//        }, (err, result) => {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             res.send(result);
-//             console.log(result);
-//        }})
-// })
 module.exports = router
