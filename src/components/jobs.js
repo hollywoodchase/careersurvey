@@ -82,7 +82,7 @@ class Jobs extends Component {
                                     <p><strong>Available Jobs:</strong> {(info.jobsAvailable)}</p>
                                     {/* Buttons */}
                                     <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
-                                    <a href="#" className="infobtn saveButton btn btn-secondary" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></a>
+                                    <button type="button" class="infobtn saveButton btn btn-secondary" data-toggle="button" aria-pressed="false" autocomplete="off" onClick={() => { this.saveJobs(info) }}><h6>Save</h6></button>
                                 </div>
                             </div>
 
