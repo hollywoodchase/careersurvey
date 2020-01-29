@@ -220,15 +220,16 @@ router.get('/jobs', (req, res) => {
     }
 });
 
+
 router.post('/saved', (req, res) => {
     console.log('PRINT REQ BODY');
     console.log(req.body);
     console.log(req.user);
-    // console.log(ids);
+
     User.update({
         _id: req.user._id
     }, {
-        $push: {
+        $addToSet: {
             jobs: req.body.notes
         }
     }, (err, result) => {
