@@ -21,12 +21,12 @@ class Navbar extends Component {
                 })
             }
         })
-        // .then(function(response) {
-        //     window.location.replace("/login");
-        // })
-        .catch(error => {
-            console.log('Logout error')
-        })
+            // .then(function(response) {
+            //     window.location.replace("/login");
+            // })
+            .catch(error => {
+                console.log('Logout error')
+            })
         window.location.href = "/login";
     }
     render() {
@@ -41,18 +41,20 @@ class Navbar extends Component {
                             <section className="navbar-section">
                                 <Link to="#" className="btn btn-link text-secondary logout-link" onClick={this.logout}>
                                     <span className="text-secondary">Logout</span></Link>
-                                    <Link to="/" className="btn btn-link text-secondary">
-                                        <span className="text-secondary">Home</span>
-                                    </Link>
-                                    <Link to="/survey" className="btn btn-link">
-                                        <span className="text-secondary">Take Survey</span>
-                                    </Link>
-                                    <Link to="/saved" className="btn btn-link">
-                                        <span className="text-secondary">Saved Jobs</span>
-                                    </Link>
-                                    <Link to="/jobs" className="btn btn-link">
-                                        <span className="text-secondary">Survey Results</span>
-                                    </Link>
+
+                                {/* <Link to="/" className="btn btn-link text-secondary">
+                                    <span className="text-secondary">Home</span>
+                                </Link> */}
+
+                                <Link to="/survey" className="btn btn-link">
+                                    <span className="text-secondary">Take Survey</span>
+                                </Link>
+                                <Link to="/saved" className="btn btn-link">
+                                    <span className="text-secondary">Saved Jobs</span>
+                                </Link>
+                                <Link to="/jobs" className="btn btn-link">
+                                    <span className="text-secondary">Survey Results</span>
+                                </Link>
                             </section>
                         ) : (
                                 <section className="navbar-section">
@@ -69,7 +71,7 @@ class Navbar extends Component {
                             )}
                     </div>
                     <div className="col-4 d-flex justify-content-center">
-                    <img className="logo"src={Logo} alt="logo" />
+                        <img className="logo" src={Logo} alt="logo" />
                     </div>
                 </header>
             </div>
