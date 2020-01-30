@@ -16,10 +16,10 @@ class Savedjobs extends Component {
     componentDidMount() {
         // if (this.props.isloggedin) {
         console.log(this.props)
-        if (!this.props.isloggedin) {
+        // if (!this.props.isloggedin) {
 
-            this.props.history.push("/loggedout")
-        }
+        //     this.props.history.push("/loggedout")
+        // }
         this.getJobs();
         // }
     };
@@ -87,7 +87,7 @@ class Savedjobs extends Component {
                                     <p><strong>Description:</strong> {(info.description)}</p>
                                     <p><strong>Median Salary:</strong> {(info.salary) + "/yr"}</p>
                                     <p><strong>Median Hourly Wage:</strong> {(info.hourly + "/hr")}</p>
-                                    <p><strong>Affordable Rent:</strong> {(info.rent) + "/mo"}</p>
+                                    <p><strong>Rent You Could Afford:</strong> {(info.rent) + "/mo"}</p>
                                     <p><strong>Available Jobs:</strong> {(info.jobsAvailable)}</p>
                                     {/* Buttons */}
                                     <a href={(info.link)} target="_blank" className="infobtn seemoreButton btn btn-info"><h6>See More</h6></a>
