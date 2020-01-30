@@ -16,10 +16,10 @@ class Savedjobs extends Component {
     componentDidMount() {
         // if (this.props.isloggedin) {
         console.log(this.props)
-        if (!this.props.isloggedin) {
+        // if (!this.props.isloggedin) {
 
-            this.props.history.push("/loggedout")
-        }
+        //     this.props.history.push("/loggedout")
+        // }
         this.getJobs();
         // }
     };
