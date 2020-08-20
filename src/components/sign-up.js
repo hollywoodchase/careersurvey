@@ -12,7 +12,6 @@ class Signup extends Component {
 			confirmPassword: '',
 			error: false,
 			errorMessage: ""
-
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)

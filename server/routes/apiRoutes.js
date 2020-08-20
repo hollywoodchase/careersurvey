@@ -48,18 +48,18 @@ const router = express.Router();
   //   res.json(jobs[bestFriendIndex]);
   // });
 
-  // app.post("/surveyResults", function(req, res) {
-  //   db.User.create(req.body)
-  //   .then(function(dbUser) {
-  //     // If a Note was created successfully, find one User (there's only one) and push the new Note's _id to the User's `notes` array
-  //     // { new: true } tells the query that we want it to return the updated User -- it returns the original by default
-  //     // Since our mongoose query returns a promise, we can chain another `.then` which receives the result of the query
-  //     res.json(dbUser)
-  //   })
-  //   .catch(function(err) {
-  //     // If an error occurs, send it back to the client
-  //     res.json(err);
-  //   });
-  // });
+  app.post("/surveyResults", function(req, res) {
+    db.User.create(req.body)
+    .then(function(dbUser) {
+      // If a Note was created successfully, find one User (there's only one) and push the new Note's _id to the User's `notes` array
+      // { new: true } tells the query that we want it to return the updated User -- it returns the original by default
+      // Since our mongoose query returns a promise, we can chain another `.then` which receives the result of the query
+      res.json(dbUser)
+    })
+    .catch(function(err) {
+      // If an error occurs, send it back to the client
+      res.json(err);
+    });
+  });
 
   module.exports = router;
